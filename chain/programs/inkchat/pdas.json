@@ -1,0 +1,403 @@
+{
+  "program": "inkchat",
+  "programId": "8BGyBLWpPcJQ5yw4aupJToBvushHWHcYrk9rWBYJh3ui",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-27",
+  "note": "Live 8BGy. Kit program id inktped\u2026 is not deployed. solchat-sdk is a different program \u2014 do not mix seeds.",
+  "live": [
+    {
+      "type": "Registry",
+      "account": "9L8ALhkTVQwLTJFeDvJeafnQY8Tb9ATjXbhPGkCH6NMW",
+      "derived": "9L8ALhkTVQwLTJFeDvJeafnQY8Tb9ATjXbhPGkCH6NMW",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254,
+      "wallet": "2zc7PcP3yGpYTWwuX1d8Ce5QLFgmGox6VvE2ASB4SBWC"
+    },
+    {
+      "type": "Registry",
+      "account": "2Y7KUyCEjptgA5ZS2BKR7KQ3jQPVcSGoGWmVeUrMg3AF",
+      "derived": "2Y7KUyCEjptgA5ZS2BKR7KQ3jQPVcSGoGWmVeUrMg3AF",
+      "match": true,
+      "bumpLive": 253,
+      "bumpDerived": 253,
+      "wallet": "7TwRS2sie2PySQwFjsEueE2JsSok8P2mQhgmiVgQGK9H"
+    },
+    {
+      "type": "Registry",
+      "account": "AqQ9ezsrmvwgLWH3EC7eRMFfhVdnsNDow3cwCCtW857e",
+      "derived": "AqQ9ezsrmvwgLWH3EC7eRMFfhVdnsNDow3cwCCtW857e",
+      "match": true,
+      "bumpLive": 255,
+      "bumpDerived": 255,
+      "wallet": "J2xD9NzTrLdhccfkrrv12cJTHkuM5FiCzQEx7qZL9hV5"
+    },
+    {
+      "type": "Channel",
+      "account": "GJYW3jtzvS1w8xUQdUaSNpi9FJB1v4zQfGCXaHDz32P3",
+      "derived": "GJYW3jtzvS1w8xUQdUaSNpi9FJB1v4zQfGCXaHDz32P3",
+      "match": true,
+      "bumpLive": 252,
+      "bumpDerived": 252,
+      "channelIdHex": "02000000000000000000000000000000",
+      "name": "Ustur Faction Chat"
+    },
+    {
+      "type": "Channel",
+      "account": "CBr63gp1LvSsGc6MxJb4wgsBoyTrJ83XsSJzsi1q2AYX",
+      "derived": "CBr63gp1LvSsGc6MxJb4wgsBoyTrJ83XsSJzsi1q2AYX",
+      "match": true,
+      "bumpLive": 255,
+      "bumpDerived": 255,
+      "channelIdHex": "5265646c696768742044697374726963",
+      "name": "Redlight District \ud83d\udc8b"
+    },
+    {
+      "type": "Channel",
+      "account": "3RgWFRxk81jzSrPjjM2ijmnjURqbwUih4FBsiJKPaspb",
+      "derived": "3RgWFRxk81jzSrPjjM2ijmnjURqbwUih4FBsiJKPaspb",
+      "match": true,
+      "bumpLive": 255,
+      "bumpDerived": 255,
+      "channelIdHex": "47414c49410000000000000000000000",
+      "name": "Galia Communications Network"
+    },
+    {
+      "type": "Channel",
+      "account": "3TBqGFriQrVkWRWwRyjGYy1hFFrk4jx6JZ55yLdFGZJu",
+      "derived": "3TBqGFriQrVkWRWwRyjGYy1hFFrk4jx6JZ55yLdFGZJu",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254,
+      "channelIdHex": "01000000000000000000000000000000",
+      "name": "ONI Faction Chat"
+    },
+    {
+      "type": "Channel",
+      "account": "FZ8XLLw9GUQLKts4gn56GjENcJxUFt2PkHUjutqqLLpD",
+      "derived": "FZ8XLLw9GUQLKts4gn56GjENcJxUFt2PkHUjutqqLLpD",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254,
+      "channelIdHex": "f09f95b9efb88f41726361646520f09f",
+      "name": "\ud83d\udd79\ufe0fArcade \ud83d\udd79\ufe0f\ud83d\udc7e"
+    },
+    {
+      "type": "ChannelMessage",
+      "account": "DcJ8Ae9FquVz8oyoBwjgXH2GDQHkpiZwtKub9aLzkFMZ",
+      "derived": "DcJ8Ae9FquVz8oyoBwjgXH2GDQHkpiZwtKub9aLzkFMZ",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254,
+      "nonce": 3872023154529532011
+    },
+    {
+      "type": "ChannelMessage",
+      "account": "nNhV3VuPD6g5ao7aLnf1uPVSmBcUTKMzryDoChMUCrv",
+      "derived": "nNhV3VuPD6g5ao7aLnf1uPVSmBcUTKMzryDoChMUCrv",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254,
+      "sender": "CstU4EsBpNSG7SyvWH7hrMjHKr3EYbkvir9WS4uQy1AB",
+      "nonce": 10561442049300868807
+    },
+    {
+      "type": "ChannelMessage",
+      "account": "9MvLrswU9WHyknH8pCduHYF748qPwrhhrADRcwLKss5a",
+      "derived": "9MvLrswU9WHyknH8pCduHYF748qPwrhhrADRcwLKss5a",
+      "match": true,
+      "bumpLive": 255,
+      "bumpDerived": 255,
+      "sender": "7q28C3gT6Zo4hwhoqZsZjf8hsut49ctaHMNzk72xzHz3",
+      "nonce": 4008398071276559823
+    },
+    {
+      "type": "ChannelMessage",
+      "account": "363Q2KHm9RW6nKy2PuXeShZXi8iAoYci9RztNBuTsRzo",
+      "derived": "363Q2KHm9RW6nKy2PuXeShZXi8iAoYci9RztNBuTsRzo",
+      "match": true,
+      "bumpLive": 255,
+      "bumpDerived": 255,
+      "sender": "DitP7ZJUfz1MbCrdVAxgXrSLm61AQNicU1RagKYeTGgs",
+      "nonce": 14896938625520317336
+    },
+    {
+      "type": "Message",
+      "account": "GBPi3MrGyVSxWDViP5KyUGHpScfcuW4qGMd1pTLDXA66",
+      "derived": "GBPi3MrGyVSxWDViP5KyUGHpScfcuW4qGMd1pTLDXA66",
+      "match": true,
+      "bumpLive": 254,
+      "bumpDerived": 254
+    },
+    {
+      "type": "Message",
+      "account": "5YVQ29LQ1GykjXsQCkhemR5cU8izKgMB4QmyjDn9Y4MG",
+      "derived": "5YVQ29LQ1GykjXsQCkhemR5cU8izKgMB4QmyjDn9Y4MG",
+      "match": true,
+      "bumpLive": 252,
+      "bumpDerived": 252
+    },
+    {
+      "type": "Message",
+      "account": "7Q8Vk6qUtvHYc7ZG39bFCjH4613cgB7VKkp9UMiWquuP",
+      "derived": "7Q8Vk6qUtvHYc7ZG39bFCjH4613cgB7VKkp9UMiWquuP",
+      "match": true,
+      "bumpLive": 253,
+      "bumpDerived": 253
+    },
+    {
+      "type": "FeeSplit",
+      "account": "9upEAofu8A5y3e6jzCYef5NgE6ocJkRxTKrDnRVoRZ5Q",
+      "derived": "9upEAofu8A5y3e6jzCYef5NgE6ocJkRxTKrDnRVoRZ5Q",
+      "match": true,
+      "exists": false,
+      "bumpDerived": 255
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Registry",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "registry"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    },
+    {
+      "name": "Channel",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "channel"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        }
+      ]
+    },
+    {
+      "name": "ChannelBan",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "chan_ban"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    },
+    {
+      "name": "ChannelMessage",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "chan_msg"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ]
+    },
+    {
+      "name": "CleanupAuthority",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "cleanup_auth"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    },
+    {
+      "name": "FeeSplit",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "fee_split"
+        }
+      ]
+    },
+    {
+      "name": "Guild",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "guild"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        }
+      ]
+    },
+    {
+      "name": "GuildBan",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "guild_ban"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    },
+    {
+      "name": "GuildMessage",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "gmsg"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ]
+    },
+    {
+      "name": "Membership",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "member"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    },
+    {
+      "name": "Message",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "msg"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "recipient"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ]
+    },
+    {
+      "name": "Backup",
+      "program": "inkchat",
+      "isPda": true,
+      "liveVerified": false,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "backup"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ]
+    }
+  ]
+}

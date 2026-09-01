@@ -1,0 +1,72 @@
+{
+  "programId": "PSubAEkp16MhpP7AfB5kBbpWQ4cppUj9nxS5vUkHT13",
+  "name": "zink-subscription",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-25T15:13:29Z",
+  "discriminatorScheme": "sha256('account:'+TypeName)[:8]",
+  "framework": "star-frame",
+  "accountTypes": [
+    {
+      "name": "SubscriptionAccount",
+      "discriminator": "f7010648ac421880",
+      "size": {
+        "kind": "fixed",
+        "bytes": 267,
+        "min": 267,
+        "max": 267,
+        "mode": 267,
+        "modeCount": 5,
+        "liveCount": 5,
+        "sizeHistogramCount": 1
+      },
+      "sample": "Aa613t7Yj8JuVwdYytRQdxt7QVs6zpBVjnS1GN2cw4HK",
+      "layoutComplete": false,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "unknown_8",
+          "type": "u8",
+          "offset": 8,
+          "note": "Version-like; live 0."
+        },
+        {
+          "name": "unknown_9",
+          "type": "Pubkey",
+          "offset": 9,
+          "note": "Empirical; not a closed Borsh walk."
+        },
+        {
+          "name": "unknown_41",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "unknown_73",
+          "type": "Pubkey",
+          "offset": 73
+        },
+        {
+          "name": "remainder",
+          "type": "[u8;162]",
+          "offset": 105
+        }
+      ],
+      "createdBy": [
+        "initialize_subscription"
+      ],
+      "mutatedBy": [
+        "cancel_subscription",
+        "update_payout_key",
+        "settle"
+      ],
+      "closedBy": [
+        "close_subscription"
+      ]
+    }
+  ]
+}

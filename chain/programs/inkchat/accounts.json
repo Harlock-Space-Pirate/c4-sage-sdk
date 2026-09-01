@@ -1,0 +1,960 @@
+{
+  "programId": "8BGyBLWpPcJQ5yw4aupJToBvushHWHcYrk9rWBYJh3ui",
+  "name": "inkchat",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-27T09:42:10Z",
+  "discriminatorScheme": "sha256('account:'+TypeName)[:8]",
+  "framework": "star-frame",
+  "accountTypes": [
+    {
+      "name": "Registry",
+      "discriminator": "2fae6ef6b8b6fcda",
+      "size": {
+        "kind": "fixed",
+        "bytes": 74,
+        "min": 74,
+        "max": 74,
+        "mode": 74,
+        "modeCount": 480,
+        "liveCount": 480,
+        "sizeHistogramCount": 1
+      },
+      "sample": "9L8ALhkTVQwLTJFeDvJeafnQY8Tb9ATjXbhPGkCH6NMW",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "encPubkey",
+          "type": "[u8;32]",
+          "offset": 41
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "tail",
+          "type": "Vec<u8>",
+          "offset": 74,
+          "note": "RemainingBytes. Live accounts are 74 B \u2192 empty tail."
+        }
+      ],
+      "createdBy": [
+        "register"
+      ],
+      "mutatedBy": [
+        "update_registry"
+      ],
+      "closedBy": [
+        "close_registry"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "registry"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": true,
+      "pdaProof": "9L8ALhkTVQwLTJFeDvJeafnQY8Tb9ATjXbhPGkCH6NMW"
+    },
+    {
+      "name": "Channel",
+      "discriminator": "319f636adc57db58",
+      "size": {
+        "kind": "variable",
+        "min": 74,
+        "max": 96,
+        "mode": 82,
+        "modeCount": 2,
+        "liveCount": 9,
+        "sizeHistogramCount": 8
+      },
+      "sample": "GJYW3jtzvS1w8xUQdUaSNpi9FJB1v4zQfGCXaHDz32P3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "creator",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "createdAt",
+          "type": "i64",
+          "offset": 57
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 65
+        },
+        {
+          "name": "name",
+          "type": "Vec<u8>",
+          "offset": 66,
+          "note": "RemainingBytes UTF-8. Fixed prefix 66 B."
+        }
+      ],
+      "createdBy": [
+        "create_channel"
+      ],
+      "closedBy": [
+        "delete_channel"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "channel"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": true,
+      "pdaProof": "GJYW3jtzvS1w8xUQdUaSNpi9FJB1v4zQfGCXaHDz32P3"
+    },
+    {
+      "name": "ChannelMessage",
+      "discriminator": "ac954d1b58e35057",
+      "size": {
+        "kind": "variable",
+        "min": 77,
+        "max": 389,
+        "mode": 128,
+        "modeCount": 14,
+        "liveCount": 205,
+        "sizeHistogramCount": 106
+      },
+      "sample": "DcJ8Ae9FquVz8oyoBwjgXH2GDQHkpiZwtKub9aLzkFMZ",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "sender",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "timestamp",
+          "type": "i64",
+          "offset": 57
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 65
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "content",
+          "type": "Vec<u8>",
+          "offset": 74
+        }
+      ],
+      "createdBy": [
+        "post_to_channel"
+      ],
+      "closedBy": [
+        "delete_channel_message",
+        "cleanup_channel_message"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "chan_msg"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": true,
+      "pdaProof": "DcJ8Ae9FquVz8oyoBwjgXH2GDQHkpiZwtKub9aLzkFMZ"
+    },
+    {
+      "name": "Message",
+      "discriminator": "6e97176ec6067db5",
+      "size": {
+        "kind": "variable",
+        "min": 196,
+        "max": 336,
+        "mode": 234,
+        "modeCount": 2,
+        "liveCount": 25,
+        "sizeHistogramCount": 22
+      },
+      "sample": "GBPi3MrGyVSxWDViP5KyUGHpScfcuW4qGMd1pTLDXA66",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "sender",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "recipient",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "senderEncPubkey",
+          "type": "[u8;32]",
+          "offset": 73
+        },
+        {
+          "name": "recipientEncPubkey",
+          "type": "[u8;32]",
+          "offset": 105
+        },
+        {
+          "name": "timestamp",
+          "type": "i64",
+          "offset": 137
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 145
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 153
+        },
+        {
+          "name": "ciphertext",
+          "type": "Vec<u8>",
+          "offset": 154
+        }
+      ],
+      "createdBy": [
+        "send_message"
+      ],
+      "closedBy": [
+        "delete_message"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "msg"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "recipient"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": true,
+      "pdaProof": "GBPi3MrGyVSxWDViP5KyUGHpScfcuW4qGMd1pTLDXA66"
+    },
+    {
+      "name": "Backup",
+      "discriminator": "b98464795bdc4bf6",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "activeEncPubkey",
+          "type": "[u8;32]",
+          "offset": 41
+        },
+        {
+          "name": "backupMethod",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 74
+        },
+        {
+          "name": "wrappedData",
+          "type": "Vec<u8>",
+          "offset": 75
+        }
+      ],
+      "createdBy": [
+        "set_backup"
+      ],
+      "closedBy": [
+        "close_backup"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "backup"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "ChannelBan",
+      "discriminator": "310edfeffa87ee9f",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "bannedBy",
+          "type": "Pubkey",
+          "offset": 57
+        },
+        {
+          "name": "bannedAt",
+          "type": "i64",
+          "offset": 89
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 97
+        },
+        {
+          "name": "reason",
+          "type": "Vec<u8>",
+          "offset": 98
+        }
+      ],
+      "createdBy": [
+        "ban_from_channel"
+      ],
+      "closedBy": [
+        "unban_from_channel"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "chan_ban"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "channelId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "CleanupAuthority",
+      "discriminator": "e6746d8968d6bd30",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "addedBy",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "tail",
+          "type": "Vec<u8>",
+          "offset": 74
+        }
+      ],
+      "createdBy": [
+        "add_cleanup_bot"
+      ],
+      "closedBy": [
+        "remove_cleanup_bot"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "cleanup_auth"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "FeeSplit",
+      "discriminator": "5610153d659c8c09",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "authority",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "numRecipients",
+          "type": "u8",
+          "offset": 41
+        },
+        {
+          "name": "recipients",
+          "type": "[Pubkey;8]",
+          "offset": 42
+        },
+        {
+          "name": "percentages",
+          "type": "[u16;8]",
+          "offset": 298,
+          "note": "Must sum to 10000 bps for active entries."
+        },
+        {
+          "name": "updatedAt",
+          "type": "i64",
+          "offset": 314
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 322
+        },
+        {
+          "name": "tail",
+          "type": "Vec<u8>",
+          "offset": 323
+        }
+      ],
+      "createdBy": [
+        "init_fee_split"
+      ],
+      "mutatedBy": [
+        "update_fee_split"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "fee_split"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaDerived": "9upEAofu8A5y3e6jzCYef5NgE6ocJkRxTKrDnRVoRZ5Q",
+      "pdaNote": "Singleton PDA derived LIVE 2026-08-27; getAccountInfo null (unprovisioned)."
+    },
+    {
+      "name": "Guild",
+      "discriminator": "4ab039a4c3bc9ced",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "owner",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "currentKeyVersion",
+          "type": "u32",
+          "offset": 57
+        },
+        {
+          "name": "memberCount",
+          "type": "u32",
+          "offset": 61
+        },
+        {
+          "name": "createdAt",
+          "type": "i64",
+          "offset": 65
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "name",
+          "type": "Vec<u8>",
+          "offset": 74
+        }
+      ],
+      "createdBy": [
+        "create_guild"
+      ],
+      "mutatedBy": [
+        "invite_member",
+        "kick_member",
+        "leave_guild",
+        "transfer_ownership"
+      ],
+      "closedBy": [
+        "dissolve_guild"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "guild"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "GuildBan",
+      "discriminator": "0b26686c767257c0",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "bannedBy",
+          "type": "Pubkey",
+          "offset": 57
+        },
+        {
+          "name": "bannedAt",
+          "type": "i64",
+          "offset": 89
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 97
+        },
+        {
+          "name": "reason",
+          "type": "Vec<u8>",
+          "offset": 98
+        }
+      ],
+      "createdBy": [
+        "ban_from_guild"
+      ],
+      "closedBy": [
+        "unban_from_guild"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "guild_ban"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "GuildMessage",
+      "discriminator": "31f221274ca6be94",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "sender",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "keyVersion",
+          "type": "u32",
+          "offset": 57
+        },
+        {
+          "name": "timestamp",
+          "type": "i64",
+          "offset": 61
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 69
+        },
+        {
+          "name": "channelId",
+          "type": "u8",
+          "offset": 77
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 78
+        },
+        {
+          "name": "ciphertext",
+          "type": "Vec<u8>",
+          "offset": 79
+        }
+      ],
+      "createdBy": [
+        "post_to_guild"
+      ],
+      "closedBy": [
+        "delete_guild_message",
+        "cleanup_guild_message"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "gmsg"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "sender"
+        },
+        {
+          "kind": "field",
+          "type": "u64_le_bytes",
+          "role": "nonce"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    },
+    {
+      "name": "Membership",
+      "discriminator": "e78db4626da8afa6",
+      "size": {
+        "kind": "variable",
+        "liveCount": 0
+      },
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 9
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 25
+        },
+        {
+          "name": "role",
+          "type": "u8",
+          "offset": 57
+        },
+        {
+          "name": "keyVersion",
+          "type": "u32",
+          "offset": 58
+        },
+        {
+          "name": "joinedAt",
+          "type": "i64",
+          "offset": 62
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 70
+        },
+        {
+          "name": "encryptedChannelKey",
+          "type": "[u8;80]",
+          "offset": 71
+        },
+        {
+          "name": "tail",
+          "type": "Vec<u8>",
+          "offset": 151
+        }
+      ],
+      "createdBy": [
+        "invite_member",
+        "create_guild"
+      ],
+      "mutatedBy": [
+        "refresh_member_key",
+        "update_member_role"
+      ],
+      "closedBy": [
+        "kick_member",
+        "leave_guild",
+        "close_membership"
+      ],
+      "pdaSeeds": [
+        {
+          "kind": "literal",
+          "value": "member"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;16]",
+          "role": "guildId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "wallet"
+        }
+      ],
+      "isPda": true,
+      "pdaLiveVerified": false,
+      "pdaNote": "Seed from kit IDL. No live accounts (GPA 0)."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "inkchat",
+  "programId": "8BGyBLWpPcJQ5yw4aupJToBvushHWHcYrk9rWBYJh3ui",
+  "role": "chat",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "programData": "6AtRJVbAtwpZTGbsEJGBG6mRDAbhXzPvm83b2DzfMLeZ",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 44613629,
+  "verifiedAt": "2026-08-27T09:42:10Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 33,
+    "player": 29,
+    "admin": 4,
+    "unknown": 0
+  },
+  "argsFilled": true,
+  "solchatSdk": {
+    "isLiveInkChat": false,
+    "reason": "Anchor solchat (initializeUser/createGroup, seeds user/group, RSA). Live InkChat is Star Frame 8BGy (register/post_to_channel, seeds registry/channel).",
+    "zinkAccountInfo": [
+      {
+        "programId": "3RwiUiCrxqsnbSBkbqAdRCY3n9RdwJHG9MVeSmtG7PSs",
+        "exists": false,
+        "executable": false
+      },
+      {
+        "programId": "5zf6JLJTTHobHboH7X17k5x3TeACiziomehjAGRx6PYq",
+        "exists": false,
+        "executable": false
+      },
+      {
+        "programId": "9dBYNp2M6waWyDhpXptBAALAEuV5MHCZUUB9eTpufbbS",
+        "exists": false,
+        "executable": false
+      },
+      {
+        "programId": "inktpedUGYBTw82RQ4CQKgyXuidN8Ja5Pdubvb4Fsy1",
+        "exists": false,
+        "executable": false
+      }
+    ]
+  }
+}

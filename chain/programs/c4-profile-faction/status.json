@@ -1,0 +1,19 @@
+{
+  "name": "c4-profile-faction",
+  "programId": "C4FACQA1PpNRKrjQ2862ABNR42DTz7EzGj1uhTNFASwP",
+  "role": "enlistment",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "programData": "2KihDYBqv2XwH69cPoj4oLqPxzyFtKrzHdZ9fn6mUeDz",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 27180207,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 1,
+    "player": 1,
+    "admin": 0,
+    "unknown": 0
+  }
+}

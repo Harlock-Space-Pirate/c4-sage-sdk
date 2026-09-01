@@ -1,0 +1,1040 @@
+{
+  "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+  "types": [
+    {
+      "name": "activeStimulant",
+      "size": 6,
+      "type": "struct"
+    },
+    {
+      "name": "addShipArgs",
+      "size": 3,
+      "type": "struct"
+    },
+    {
+      "name": "ammoUsage",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "appendScanPatternNoiseMapsArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "asteroid",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "asteroidResourceState",
+      "size": 24,
+      "type": "struct"
+    },
+    {
+      "name": "atlasRewardConfigInitValues",
+      "size": 142,
+      "type": "struct"
+    },
+    {
+      "name": "atlasRewardConfigPartial",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "boundingBox",
+      "size": 32,
+      "type": "struct"
+    },
+    {
+      "name": "buildingDefinition",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "buildingDefinitionSized",
+      "size": 99,
+      "type": "struct"
+    },
+    {
+      "name": "buildingDefinitionUnsizedInputs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "buildingDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "buildingId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "buildingTag",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "cancelOrderArgs",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "cargoCategoryId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "cargoDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "cargoFlags",
+      "size": 4,
+      "type": "u32"
+    },
+    {
+      "name": "cargoId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "cargoPod",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "cargoStats",
+      "size": 40,
+      "type": "struct"
+    },
+    {
+      "name": "cargoType",
+      "size": 124,
+      "type": "struct"
+    },
+    {
+      "name": "cargoTypeCache",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "cargoTypeUpdate",
+      "size": 89,
+      "type": "struct"
+    },
+    {
+      "name": "categoryXpInfo",
+      "size": 20,
+      "type": "struct"
+    },
+    {
+      "name": "celestialBodyId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "celestialBodyType",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "celestialBodyTypeBorsh",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "characterAssetCounts",
+      "size": 12,
+      "type": "struct"
+    },
+    {
+      "name": "characterModifier",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "characterModifierInput",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "characterModifierSized",
+      "size": 99,
+      "type": "struct"
+    },
+    {
+      "name": "characterModifiers",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "checkInStreakInfo",
+      "size": 12,
+      "type": "struct"
+    },
+    {
+      "name": "claimStakeDefinition",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "claimStakeDefinitionId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "claimStakeDefinitionSized",
+      "size": 89,
+      "type": "struct"
+    },
+    {
+      "name": "claimStakeDefinitionUnsizedInputs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "claimStakeDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "claimStakeTransfer",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "claimStakesInfo",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "combatConfig",
+      "size": 53,
+      "type": "struct"
+    },
+    {
+      "name": "combatConfigPartial",
+      "size": 62,
+      "type": "struct"
+    },
+    {
+      "name": "combatRewardLeg",
+      "size": 48,
+      "type": "struct"
+    },
+    {
+      "name": "combatStatField",
+      "size": 1,
+      "type": "u8"
+    },
+    {
+      "name": "combatStats",
+      "size": 180,
+      "type": "struct"
+    },
+    {
+      "name": "condPerkEntry",
+      "size": 8,
+      "type": "struct"
+    },
+    {
+      "name": "connectionCost",
+      "size": 48,
+      "type": "struct"
+    },
+    {
+      "name": "craftingHabDefinition",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "craftingHabDefinitionId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "craftingHabDefinitionSized",
+      "size": 89,
+      "type": "struct"
+    },
+    {
+      "name": "craftingHabDefinitionUnsizedInputs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "craftingHabDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "craftingHabsInfo",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "craftingModifiers",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "createEncounterTreasuryArgs",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "createFactionArgs",
+      "size": 71,
+      "type": "struct"
+    },
+    {
+      "name": "createFactionMarketArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "createFactionTreasuryArgs",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "createRecipeInputData",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "createScanPatternArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "crewMigrateInput",
+      "size": 35,
+      "type": "struct"
+    },
+    {
+      "name": "crewRecord",
+      "size": 296,
+      "type": "struct"
+    },
+    {
+      "name": "crewStats",
+      "size": 24,
+      "type": "struct"
+    },
+    {
+      "name": "crewStatus",
+      "size": 33,
+      "type": "struct"
+    },
+    {
+      "name": "crewTransferInput",
+      "size": 37,
+      "type": "struct"
+    },
+    {
+      "name": "currencies",
+      "size": 216,
+      "type": "struct"
+    },
+    {
+      "name": "currencyBalanceCache",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "currencyConfig",
+      "size": 108,
+      "type": "struct"
+    },
+    {
+      "name": "dailyCheckInConfig",
+      "size": 48,
+      "type": "struct"
+    },
+    {
+      "name": "destroyed",
+      "size": 0,
+      "type": "tuple"
+    },
+    {
+      "name": "docked",
+      "size": 40,
+      "type": "struct"
+    },
+    {
+      "name": "factionEconomicsDials",
+      "size": 28,
+      "type": "struct"
+    },
+    {
+      "name": "factionPair",
+      "size": 4,
+      "type": "struct"
+    },
+    {
+      "name": "factionStatus",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "fleetCargoHoldInput",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "fleetCargoPod",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "fleetStance",
+      "size": 1,
+      "type": "struct"
+    },
+    {
+      "name": "fleetState",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "gearRef",
+      "size": 8,
+      "type": "struct"
+    },
+    {
+      "name": "habBuildingDefinition",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "habBuildingDefinitionSized",
+      "size": 115,
+      "type": "struct"
+    },
+    {
+      "name": "habBuildingDefinitionUnsizedInputs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "habBuildingDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "idle",
+      "size": 0,
+      "type": "tuple"
+    },
+    {
+      "name": "initFactionOwnershipArgs",
+      "size": 18,
+      "type": "struct"
+    },
+    {
+      "name": "intermediateData",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "journey",
+      "size": 56,
+      "type": "struct"
+    },
+    {
+      "name": "liveOffer",
+      "size": 19,
+      "type": "struct"
+    },
+    {
+      "name": "locationTag",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "lootInfo",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "loyaltyEpochStatus",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "makerInfo",
+      "size": 26,
+      "type": "struct"
+    },
+    {
+      "name": "maxLevel1",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel1Set",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel2",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel2Set",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel3",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel3Set",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel4",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel4Set",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel5",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "maxLevel5Set",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "medallionRewardConfig",
+      "size": 12,
+      "type": "struct"
+    },
+    {
+      "name": "minMax",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "mineAsteroid",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "minorFactionId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "miscStats",
+      "size": 44,
+      "type": "struct"
+    },
+    {
+      "name": "moveSubwarp",
+      "size": 88,
+      "type": "struct"
+    },
+    {
+      "name": "moveWarp",
+      "size": 32,
+      "type": "struct"
+    },
+    {
+      "name": "movementStats",
+      "size": 36,
+      "type": "struct"
+    },
+    {
+      "name": "name",
+      "size": 64,
+      "type": "[u8;64]"
+    },
+    {
+      "name": "noiseMapType",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "noisePowerFunction",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "optionalTier",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "orderBookSide",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "orderInfo",
+      "size": 56,
+      "type": "struct"
+    },
+    {
+      "name": "orderSide",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "orderTotals",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "perkDefInput",
+      "size": 11,
+      "type": "struct"
+    },
+    {
+      "name": "perkSlot",
+      "size": 4,
+      "type": "struct"
+    },
+    {
+      "name": "pilotXpBudget",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "planet",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "poolOfferEntry",
+      "size": 43,
+      "type": "struct"
+    },
+    {
+      "name": "processOrderArgs",
+      "size": 18,
+      "type": "struct"
+    },
+    {
+      "name": "productionCore",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "recipeFeeRecipient",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "recipeId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "recipeStatus",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "region",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "regionId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "registerCelestialBodyArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "registerEncounterPoolArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "registerStarbaseArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "relationEntry",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "relationship",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "renownConfig",
+      "size": 6,
+      "type": "struct"
+    },
+    {
+      "name": "researchNode",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "researchNodeId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "researchTag",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "researchTreeDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "resources",
+      "size": 8,
+      "type": "struct"
+    },
+    {
+      "name": "resourcesPartial",
+      "size": 12,
+      "type": "struct"
+    },
+    {
+      "name": "respawn",
+      "size": 17,
+      "type": "struct"
+    },
+    {
+      "name": "respawnQueue",
+      "size": 16,
+      "type": "struct"
+    },
+    {
+      "name": "riskZone",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "riskZoneBorsh",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "riskZoneChecked",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "rosterSummary",
+      "size": 315,
+      "type": "struct"
+    },
+    {
+      "name": "safetyStatus",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "salvageRewardEntry",
+      "size": 14,
+      "type": "struct"
+    },
+    {
+      "name": "scanCost",
+      "size": 6,
+      "type": "struct"
+    },
+    {
+      "name": "scanLootEntry",
+      "size": 31,
+      "type": "struct"
+    },
+    {
+      "name": "scanNoiseMap",
+      "size": 46,
+      "type": "struct"
+    },
+    {
+      "name": "scanNoiseMapBorsh",
+      "size": 46,
+      "type": "struct"
+    },
+    {
+      "name": "scanPatternId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "scanPatternStatus",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "setContestedArgs",
+      "size": 8,
+      "type": "struct"
+    },
+    {
+      "name": "setFactionConfigArgs",
+      "size": 45,
+      "type": "struct"
+    },
+    {
+      "name": "setFactionRelationConfigArgs",
+      "size": 29,
+      "type": "struct"
+    },
+    {
+      "name": "setFleetDirectiveArgs",
+      "size": 28,
+      "type": "struct"
+    },
+    {
+      "name": "ship",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "shipCounts",
+      "size": 20,
+      "type": "struct"
+    },
+    {
+      "name": "shipDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "shipId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "shipSized",
+      "size": 399,
+      "type": "struct"
+    },
+    {
+      "name": "shipStats",
+      "size": 300,
+      "type": "struct"
+    },
+    {
+      "name": "shipUnsizedInput",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "shipUploadMode",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "singleCargo",
+      "size": 10,
+      "type": "struct"
+    },
+    {
+      "name": "sizeClass",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "stackRule",
+      "size": 1,
+      "type": "u8"
+    },
+    {
+      "name": "starbase",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "starbaseIntermediateLevel",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "starbaseIntermediateLevelSet",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "starbaseLevel",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "starbaseLevelInfo",
+      "size": 46,
+      "type": "struct"
+    },
+    {
+      "name": "starbaseMaxLevel",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "starbaseMaxLevelSet",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "stimEffect",
+      "size": 7,
+      "type": "struct"
+    },
+    {
+      "name": "stimulantDefinition",
+      "size": 22,
+      "type": "struct"
+    },
+    {
+      "name": "stimulantDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "structureInstanceState",
+      "type": "enum",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "structureState",
+      "size": 8,
+      "type": "struct"
+    },
+    {
+      "name": "systemId",
+      "size": 2,
+      "type": "u16"
+    },
+    {
+      "name": "tier",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "transferFactionOwnershipArgs",
+      "size": 10,
+      "type": "struct"
+    },
+    {
+      "name": "updateCelestialBodyArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateCurrencyArgs",
+      "size": 14,
+      "type": "struct"
+    },
+    {
+      "name": "updatePlanetTablesArgs",
+      "size": 703,
+      "type": "struct"
+    },
+    {
+      "name": "updateRecipeInputData",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateRegionArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateResearchNodeInput",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateScanPatternArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateStarSystemArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateStarbaseArgs",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "updateStarbaseTablesArgs",
+      "size": 703,
+      "type": "struct"
+    },
+    {
+      "name": "upgradeLpRate",
+      "size": 10,
+      "type": "struct"
+    },
+    {
+      "name": "upgradeResource",
+      "size": 14,
+      "type": "struct"
+    },
+    {
+      "name": "upgradeState",
+      "size": 20,
+      "type": "struct"
+    },
+    {
+      "name": "withdrawalDestinationType",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "xpCategory",
+      "size": 1,
+      "type": "enum"
+    },
+    {
+      "name": "xpCost",
+      "size": 12,
+      "type": "struct"
+    },
+    {
+      "name": "xpDefinitions",
+      "type": "struct",
+      "unboundedByDesign": true
+    },
+    {
+      "name": "xpInfo",
+      "size": 168,
+      "type": "struct"
+    },
+    {
+      "name": "xpLevelThresholdInfo",
+      "size": 64,
+      "type": "struct"
+    }
+  ]
+}

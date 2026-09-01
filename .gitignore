@@ -1,0 +1,12 @@
+node_modules/
+dist/
+target/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_ed25519*
+id_rsa*
+keypair*.json

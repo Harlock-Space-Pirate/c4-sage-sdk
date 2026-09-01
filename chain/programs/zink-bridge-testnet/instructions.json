@@ -1,0 +1,70 @@
+{
+  "programId": "BSMryvZi4HYn6ASXrY3xcDwo1sG6pXigaakQMgPMv6gT",
+  "name": "zink-bridge-testnet",
+  "cluster": "zink-testnet",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "deploySlot": 15671208,
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]",
+  "instructions": [
+    {
+      "discriminator": "4f166a3ce97e1b61",
+      "name": "add_chain",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog."
+    },
+    {
+      "discriminator": "59a927a74a8affcf",
+      "name": "ack_deposit",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for ack deposit."
+    },
+    {
+      "discriminator": "8b205c923efaf7e6",
+      "name": "ack_withdraw",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for ack withdraw."
+    },
+    {
+      "discriminator": "90b7f63f273eb539",
+      "name": "unknown_1",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "b62cc4435824102e",
+      "name": "unknown_2",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "b712469c946da122",
+      "name": "withdraw",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for withdraw."
+    },
+    {
+      "discriminator": "cfca1f62257a91a5",
+      "name": "cleanup_deposit",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for cleanup deposit."
+    },
+    {
+      "discriminator": "ef793048ecff903e",
+      "name": "unknown_3",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "f223c68952e1f2b6",
+      "name": "deposit",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for deposit."
+    },
+    {
+      "discriminator": "f38c0b1478e6e7f4",
+      "name": "unknown_4",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "programId": "C4PRoFNroxxzdgeCoM31LJjYRg7kT6ymogSTAT99iD1u",
+  "name": "c4-profile",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-25T15:13:29Z",
+  "discriminatorScheme": "sha256('account:'+TypeName)[:8]",
+  "framework": "star-frame",
+  "accountTypes": [
+    {
+      "name": "Profile",
+      "discriminator": "b865a5bc5f3f7fbc",
+      "size": {
+        "kind": "variable",
+        "min": 110,
+        "max": 350,
+        "mode": 110,
+        "modeCount": 2266,
+        "liveCount": 2271,
+        "sizeHistogramCount": 4,
+        "formula": "30 + N*80"
+      },
+      "sample": "3DsVfxokDatYNWMJExNqiNFak83SdKtV6vHnnCgm3GU3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "authKeyCount",
+          "type": "u16",
+          "offset": 9,
+          "note": "Relation to key vec-len is not fully pinned."
+        },
+        {
+          "name": "keyThreshold",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "nextSeqId",
+          "type": "u64",
+          "offset": 12
+        },
+        {
+          "name": "createdAt",
+          "type": "i64",
+          "offset": 20
+        },
+        {
+          "name": "keyLen",
+          "type": "u16",
+          "offset": 28,
+          "note": "N, number of 80-byte key entries."
+        },
+        {
+          "name": "keys",
+          "type": "Vec<{key: Pubkey, scope: Pubkey, permsExpire: [u8;16]}>",
+          "offset": 30,
+          "note": "Not a Borsh Vec prefix \u2014 N is keyLen@28, stride 80. Live 110 B = 30+1*80."
+        }
+      ],
+      "createdBy": [
+        "create_profile"
+      ],
+      "mutatedBy": [
+        "add_key",
+        "add_keys",
+        "remove_keys",
+        "adjust_auth",
+        "drain_sol_vault"
+      ]
+    },
+    {
+      "name": "PlayerName",
+      "discriminator": "6609f16260c4d4a1",
+      "size": {
+        "kind": "variable",
+        "min": 43,
+        "max": 106,
+        "mode": 49,
+        "modeCount": 279,
+        "liveCount": 2264,
+        "sizeHistogramCount": 35,
+        "formula": "42 + len(utf8 name)"
+      },
+      "sample": "DeQXSkYKwzxagNySb9VdXpcBkf4VSGK2v2t2vcTVWWm2",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 41,
+          "note": "Stored bump; not always 255. Live sample this session = 254."
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "offset": 42,
+          "note": "UTF-8, no length prefix; account length closes the walk."
+        }
+      ],
+      "createdBy": [
+        "set_name"
+      ]
+    }
+  ]
+}

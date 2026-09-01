@@ -1,0 +1,19 @@
+{
+  "name": "c4-profile",
+  "programId": "C4PRoFNroxxzdgeCoM31LJjYRg7kT6ymogSTAT99iD1u",
+  "role": "identity",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "programData": "9dAKGhNvd9H9JMCg4xncyizmJybTLMy15nv8CkEGGtrr",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 27180239,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 23,
+    "player": 18,
+    "admin": 1,
+    "unknown": 4
+  }
+}

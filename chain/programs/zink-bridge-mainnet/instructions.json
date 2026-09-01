@@ -1,0 +1,7 @@
+{
+  "programId": "BR1DGEaF3Z3ZN9UouYiRLKbK2WWgFmHwUwcZKJfmJSSP",
+  "name": "zink-bridge-mainnet",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]"
+}

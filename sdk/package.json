@@ -1,0 +1,28 @@
+{
+  "name": "@staratlas-app/c4-sage-sdk",
+  "version": "0.1.0",
+  "description": "C4 SAGE (Zink) client generated from chain/ catalogs. Not an Anchor IDL.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node dist/test/smoke.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@noble/curves": "1.6.0",
+    "@noble/hashes": "1.5.0",
+    "bs58": "5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/node": "^22.13.10"
+  },
+  "license": "Apache-2.0"
+}

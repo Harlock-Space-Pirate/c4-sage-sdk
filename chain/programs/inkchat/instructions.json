@@ -1,0 +1,1542 @@
+{
+  "programId": "8BGyBLWpPcJQ5yw4aupJToBvushHWHcYrk9rWBYJh3ui",
+  "name": "inkchat",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-27T09:42:10Z",
+  "deploySlot": 44613629,
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]",
+  "instructions": [
+    {
+      "discriminator": "131f9d2924595d82",
+      "name": "dissolve_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for dissolve guild.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "1e9bc2c5633bf753",
+      "name": "ban_from_channel",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "creator",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for ban from channel.",
+      "args": [
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "reason",
+          "type": "String",
+          "offset": 48,
+          "encoding": "borsh-string"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "208148759a0873f5",
+      "name": "leave_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "member",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "membership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for leave guild.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "25536e03a997a1ed",
+      "name": "update_registry",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "registry",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for update registry.",
+      "args": [
+        {
+          "name": "encPubkey",
+          "type": "[u8;32]",
+          "offset": 0,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "2569fd63572edf14",
+      "name": "create_channel",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "creator",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Creates an InkChat channel.",
+      "args": [
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "offset": 16,
+          "encoding": "borsh-string",
+          "note": "u32le length + utf8"
+        }
+      ],
+      "argsLive": true,
+      "argsLiveProof": {
+        "sig": "3G8pRszna62R2HJnS2uw9CU4JxsUh7Q8WefuSHnMregPVQQ1ABJ9UkTThZtqxdsSdL1kSoGMTZhWJBuBJ3ubZg59",
+        "note": "borsh string name 'Ustur Faction Chat'; channelId 0200..; 3 accounts; dataLen=46"
+      }
+    },
+    {
+      "discriminator": "279be55f5de414d8",
+      "name": "close_backup",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "backup",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Closes the wallet Backup PDA and refunds rent.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "392822b2bd0a411a",
+      "name": "send_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "sender",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "senderRegistry",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "recipientRegistry",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Sends a 1:1 InkChat message.",
+      "args": [
+        {
+          "name": "recipient",
+          "type": "Pubkey",
+          "offset": 0
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 32,
+          "endian": "le"
+        },
+        {
+          "name": "recipientEncPubkey",
+          "type": "[u8;32]",
+          "offset": 40,
+          "encoding": "raw"
+        },
+        {
+          "name": "ciphertext",
+          "type": "Vec<u8>",
+          "offset": 72,
+          "encoding": "borsh-vec-u8",
+          "note": "u32le length + bytes"
+        }
+      ],
+      "argsLive": true,
+      "argsLiveProof": {
+        "sig": "4q8pC26UrdEFtG7UPLLtubBirWVCBEK2FUCS1LmwD7uKMsso2WSaWeGETjZ8JvNu4xJxQsEPWKUtEes21cfQBkGL",
+        "note": "borsh vec ciphertext: disc8+recipient32+nonce8+encPubkey32+u32le+bytes; cipherLen=168; 5 accounts"
+      }
+    },
+    {
+      "discriminator": "41b1d749352d632f",
+      "name": "transfer_ownership",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "ownerMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "newOwnerMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for transfer ownership.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "newOwner",
+          "type": "Pubkey",
+          "offset": 16
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "43e36e03d70229cb",
+      "name": "invite_member",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "inviter",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "inviterMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "newMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "inviteeRegistry",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for invite member.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "encryptedChannelKey",
+          "type": "[u8;80]",
+          "offset": 48,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "4ba3ac0375a8de56",
+      "name": "close_membership",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "member",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "membership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for close membership.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "4c209ab4339fda66",
+      "name": "close_registry",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "registry",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for close registry.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "4e41d7f467cae41b",
+      "name": "kick_member",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "kicker",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "kickerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "targetMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "targetWallet",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for kick member.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "targetWallet",
+          "type": "Pubkey",
+          "offset": 16
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "599808549c05a64e",
+      "name": "set_backup",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "backup",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Creates or updates the wallet Backup PDA with wrapped device key data.",
+      "args": [
+        {
+          "name": "encPubkey",
+          "type": "[u8;32]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "backupMethod",
+          "type": "u8",
+          "offset": 32,
+          "note": "0=none 1=wallet 2=password 3=dual"
+        },
+        {
+          "name": "wrappedData",
+          "type": "Vec<u8>",
+          "offset": 33,
+          "encoding": "borsh-vec-u8"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "6dcab7bb9b639d4b",
+      "name": "refresh_member_key",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "officer",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "officerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "targetMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for refresh member key.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "encryptedChannelKey",
+          "type": "[u8;80]",
+          "offset": 48,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "6e6d74db9a4b5236",
+      "name": "post_to_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "sender",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "senderMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for post to guild.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 16,
+          "endian": "le"
+        },
+        {
+          "name": "channelId",
+          "type": "u8",
+          "offset": 24,
+          "note": "guild-internal channel, 0=general"
+        },
+        {
+          "name": "ciphertext",
+          "type": "Vec<u8>",
+          "offset": 25,
+          "encoding": "borsh-vec-u8",
+          "note": "NaCl secretbox, max 2048 B on-chain"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "6fc375c8922ba7bd",
+      "name": "post_to_channel",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "sender",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "senderRegistry",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Posts a message to a world channel.",
+      "args": [
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "nonce",
+          "type": "u64",
+          "offset": 16,
+          "endian": "le"
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "offset": 24,
+          "encoding": "borsh-string",
+          "note": "u32le length + utf8. Account stores RemainingBytes (no length prefix)."
+        }
+      ],
+      "argsLive": true,
+      "argsLiveProof": {
+        "sig": "4ZVS2LooyTF8RayXs5gMQqnCJ8zWJzyEtnTRbn8jqGzfpKG2arGmxvbiWA2ekHQvGZFJPv7PuevGXrupqFXNgpfZ",
+        "note": "borsh string: disc8+channelId16+nonce u64le+u32le len+utf8; 6 accounts; contentLen=73"
+      }
+    },
+    {
+      "discriminator": "77ad18b2c9f98419",
+      "name": "refresh_member_keys",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "officer",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "officerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for refresh member keys.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "encryptedChannelKeys",
+          "type": "Vec<[u8;80]>",
+          "offset": 16,
+          "encoding": "u32le-count + 80*n",
+          "note": "remaining accounts = target Membership PDAs in same order"
+        }
+      ],
+      "argsLive": false,
+      "remainingAccounts": "writable target Membership PDAs, same order as encryptedChannelKeys"
+    },
+    {
+      "discriminator": "789543213f5ea8f5",
+      "name": "update_fee_split",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog; kit map stored under adminAccountsFromKit.",
+      "args": [
+        {
+          "name": "numRecipients",
+          "type": "u8",
+          "offset": 0
+        },
+        {
+          "name": "recipients",
+          "type": "[Pubkey;8]",
+          "offset": 1
+        },
+        {
+          "name": "percentages",
+          "type": "[u16;8]",
+          "offset": 257,
+          "endian": "le"
+        }
+      ],
+      "argsLive": false,
+      "adminAccountsFromKit": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ]
+    },
+    {
+      "discriminator": "8489a498a8e258a9",
+      "name": "add_cleanup_bot",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog; kit map stored under adminAccountsFromKit.",
+      "args": [
+        {
+          "name": "botWallet",
+          "type": "Pubkey",
+          "offset": 0
+        }
+      ],
+      "argsLive": false,
+      "adminAccountsFromKit": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "cleanupAuth",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ]
+    },
+    {
+      "discriminator": "88dab41982437a24",
+      "name": "cleanup_guild_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "bot",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "cleanupAuth",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for cleanup guild message.",
+      "args": [
+        {
+          "name": "recipientsLen",
+          "type": "u8",
+          "offset": 0
+        }
+      ],
+      "argsLive": false,
+      "remainingAccounts": "writable FeeSplit recipient wallets, same order as config"
+    },
+    {
+      "discriminator": "91e1bbdd9d8e7285",
+      "name": "delete_channel",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "creator",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for delete channel.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "948adbfa9dff6bd1",
+      "name": "unban_from_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "unbanner",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "unbannerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for unban from guild.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "9c17e91103ae7968",
+      "name": "remove_cleanup_bot",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog; kit map stored under adminAccountsFromKit.",
+      "args": [
+        {
+          "name": "botWallet",
+          "type": "Pubkey",
+          "offset": 0
+        }
+      ],
+      "argsLive": false,
+      "adminAccountsFromKit": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "cleanupAuth",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ]
+    },
+    {
+      "discriminator": "a31b61a784c635a8",
+      "name": "create_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "ownerMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for create guild.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "offset": 16,
+          "encoding": "borsh-string"
+        },
+        {
+          "name": "encryptedChannelKey",
+          "type": "[u8;80]",
+          "offset": "after-name",
+          "encoding": "raw",
+          "note": "libsodium sealed box of 32-byte key; offset = 16 + 4 + name_len"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "a494d23c44f9625a",
+      "name": "unban_from_channel",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "creator",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for unban from channel.",
+      "args": [
+        {
+          "name": "channelId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "ab6103c2f9afed10",
+      "name": "ban_from_guild",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "banner",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "bannerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ban",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for ban from guild.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "reason",
+          "type": "String",
+          "offset": 48,
+          "encoding": "borsh-string"
+        }
+      ],
+      "argsLive": false
+    },
+    {
+      "discriminator": "b3c613c1dd6257bd",
+      "name": "delete_channel_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "channel",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for delete channel message.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "c66316ccc8a5368a",
+      "name": "delete_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for delete message.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "d37c430fd3c2b2f0",
+      "name": "register",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "wallet",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "registry",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Registers an InkChat identity/registry.",
+      "args": [
+        {
+          "name": "encPubkey",
+          "type": "[u8;32]",
+          "offset": 0,
+          "encoding": "raw"
+        }
+      ],
+      "argsLive": true,
+      "argsLiveProof": {
+        "sig": "3ngUYTUgg53FzmfAWN9dt2ehXns7gXjnn51cWYSdVAZZmYADXXXSje2nfoJMF46WWr26qcKYcUTHBksYLK1yax8K",
+        "note": "dataLen=40 (disc8+encPubkey32), 3 accounts"
+      }
+    },
+    {
+      "discriminator": "e0181e5b948d6758",
+      "name": "init_fee_split",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog; kit map stored under adminAccountsFromKit.",
+      "args": [
+        {
+          "name": "numRecipients",
+          "type": "u8",
+          "offset": 0,
+          "note": "1-8; percentages must sum to 10000 bps"
+        },
+        {
+          "name": "recipients",
+          "type": "[Pubkey;8]",
+          "offset": 1,
+          "note": "unused slots zero-padded"
+        },
+        {
+          "name": "percentages",
+          "type": "[u16;8]",
+          "offset": 257,
+          "endian": "le"
+        }
+      ],
+      "argsLive": false,
+      "adminAccountsFromKit": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ]
+    },
+    {
+      "discriminator": "e9a8b8aec246215b",
+      "name": "delete_guild_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "authorityMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for delete guild message.",
+      "argsLive": false
+    },
+    {
+      "discriminator": "eb82901a0034cf8a",
+      "name": "cleanup_channel_message",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "bot",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "message",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "cleanupAuth",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "feeSplit",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Reads and/or mutates state for cleanup channel message.",
+      "args": [
+        {
+          "name": "recipientsLen",
+          "type": "u8",
+          "offset": 0,
+          "note": "FeeSplit recipient count; remaining accounts are those wallets in config order"
+        }
+      ],
+      "argsLive": false,
+      "remainingAccounts": "writable FeeSplit recipient wallets, same order as config"
+    },
+    {
+      "discriminator": "fc24cade16a82745",
+      "name": "update_member_role",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "guild",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "ownerMembership",
+          "signer": false,
+          "writable": false,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "targetMembership",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        }
+      ],
+      "mutates": "Reads and/or mutates state for update member role.",
+      "args": [
+        {
+          "name": "guildId",
+          "type": "[u8;16]",
+          "offset": 0,
+          "encoding": "raw"
+        },
+        {
+          "name": "wallet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "newRole",
+          "type": "u8",
+          "offset": 48
+        }
+      ],
+      "argsLive": false
+    }
+  ],
+  "argNote": "Args from kit builders (ink-messenger-sdk-kit-v0.3.0), not solchat-sdk. solchat-sdk is a different Anchor program (initializeUser/createGroup, RSA, seeds user/group) and its three program ids are GPA-null on rpc1.z.ink. LIVE PDA match Registry/Channel/ChannelMessage/Message. LIVE ix args: register, post_to_channel, create_channel, send_message.",
+  "instructionCounts": {
+    "total": 33,
+    "player": 29,
+    "admin": 4,
+    "unknown": 0
+  }
+}

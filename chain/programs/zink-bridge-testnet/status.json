@@ -1,0 +1,19 @@
+{
+  "name": "zink-bridge-testnet",
+  "programId": "BSMryvZi4HYn6ASXrY3xcDwo1sG6pXigaakQMgPMv6gT",
+  "role": "bridge",
+  "uiWorld": false,
+  "cluster": "zink-testnet",
+  "rpc": "https://testnet-rpc.z.ink",
+  "programData": "DGXDTM4DxrAo7Z1Bj2ATu3qa7NyzoAN3MjuTV6eBwQ6E",
+  "upgradeAuthority": "AUTHvT1tzXUniLNNPLsQb2wf1fasfXvxi3yDKVfLKbot",
+  "deploySlot": 15671208,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 10,
+    "player": 5,
+    "admin": 1,
+    "unknown": 4
+  }
+}

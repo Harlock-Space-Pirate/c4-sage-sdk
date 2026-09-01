@@ -1,0 +1,1275 @@
+{
+  "program": "c4-sage-primary",
+  "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+  "game": "EKEj47SzaCjPM3m4T4vRXrrsVtkEmiNgPMMFye3AkXj4",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-29",
+  "pdas": [
+    {
+      "name": "PlayerName",
+      "program": "c4-profile",
+      "programId": "C4PRoFNroxxzdgeCoM31LJjYRg7kT6ymogSTAT99iD1u",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "player_name"
+        },
+        {
+          "kind": "account",
+          "type": "Profile",
+          "role": "profile.key()"
+        }
+      ],
+      "parents": [
+        "Profile"
+      ],
+      "proof": "LIVE 2026-08-26 profile D7BqnTZ \u2192 PlayerName 5QfMG4JL exists 73 B. 8/8."
+    },
+    {
+      "name": "ProfileFactionAccount",
+      "program": "c4-profile-faction",
+      "programId": "C4FACQA1PpNRKrjQ2862ABNR42DTz7EzGj1uhTNFASwP",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "player_faction"
+        },
+        {
+          "kind": "account",
+          "type": "Profile",
+          "role": "profile.key()"
+        }
+      ],
+      "parents": [
+        "Profile"
+      ],
+      "proof": "LIVE 2026-08-26 profile \u2192 J1sL67mz exists. Catalog seeds [player_faction, profile]."
+    },
+    {
+      "name": "Character",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "Character"
+        },
+        {
+          "kind": "account",
+          "type": "Profile",
+          "role": "profile.key()"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Profile",
+        "Game"
+      ],
+      "children": [
+        "StarbasePlayer"
+      ],
+      "proof": "LIVE 2026-08-26 G5t3qatV = PDA(Character, D7BqnTZ, EKEj47) bump 254.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "Character"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "playerProfile"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "Fleet",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "Fleet"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        },
+        {
+          "kind": "account",
+          "type": "Profile",
+          "role": "profile.key()"
+        },
+        {
+          "kind": "field",
+          "type": "[u8;32]",
+          "role": "fleet.label32",
+          "note": "UTF-8 NUL-padded @141"
+        },
+        {
+          "kind": "literal_bytes",
+          "value": "0x00\u00d732"
+        }
+      ],
+      "parents": [
+        "Game",
+        "Profile"
+      ],
+      "proof": "LIVE 2026-08-26 A5GEvQYU find_program_address match bump 255. 177/177.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "Fleet"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "ownerProfile"
+        },
+        {
+          "kind": "field",
+          "type": "arrayTypeNode",
+          "role": "fleetLabelPart1"
+        },
+        {
+          "kind": "field",
+          "type": "arrayTypeNode",
+          "role": "fleetLabelPart2"
+        }
+      ]
+    },
+    {
+      "name": "StarbasePlayer",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "StarbasePlayer"
+        },
+        {
+          "kind": "account",
+          "type": "StarSystem",
+          "role": "starSystem.key()"
+        },
+        {
+          "kind": "account",
+          "type": "Character",
+          "role": "character.key()"
+        }
+      ],
+      "parents": [
+        "StarSystem",
+        "Character"
+      ],
+      "proof": "LIVE 2026-08-27 J7KeHnWU = PDA(StarbasePlayer, starSystem 7MGVHgV7, character TLTJTeDe) bump 255. seeds confirmed.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "StarbasePlayer"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "system"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "character"
+        }
+      ]
+    },
+    {
+      "name": "RegionTracker",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "RegionTracker"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE 2026-08-26 CbwrSoauo4\u2026 match bump 255.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "RegionTracker"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "FactionRelationTracker",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionRelations",
+          "note": "seed tag \u2260 catalog type name"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE 2026-08-26 E6X4yidK = PDA(FactionRelations, game). TypeName FactionRelationTracker does not match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "FactionRelations"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "AtlasRewardRegistry",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardRegistry"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE catalog sample F599j8mX match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardRegistry"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "AtlasRewardTreasury",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE catalog sample HuPNodDC match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "AtlasRewardConfig",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        },
+        {
+          "kind": "field",
+          "type": "u32",
+          "role": "version",
+          "note": "LE. Catalog sample AquGspXQ = v3. Live combat path uses v9 \u2192 7CVrBjvQ."
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE v3 = catalog sample; v9 = combat builder.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "AtlasRewardConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "u32",
+          "role": "configVersion"
+        }
+      ]
+    },
+    {
+      "name": "CargoDefinitionsCache",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "CargoDefinitionsCache"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE catalog sample 5guShGFr match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "CargoDefinitionsCache"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "FactionEconomicsConfig",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionEconomicsConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE catalog sample Ej43zV14 match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "FactionEconomicsConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "KingSystemTracker",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "KingSystemTracker"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE catalog sample 7baKbbta match.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "KingSystemTracker"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "CurrencyConfigCache",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "CurrencyConfig",
+          "note": "seed tag \u2260 catalog type name CurrencyConfigCache"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE E2ADwFs8 = PDA(CurrencyConfig, game) = catalog CurrencyConfigCache sample.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "CurrencyConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "FactionTreasury",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        },
+        {
+          "kind": "field",
+          "type": "u16",
+          "role": "factionId",
+          "note": "LE. Sample DTgJmQb7 = faction 1 (MUD)."
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE 2026-08-26 catalog sample match factionId=1.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "FactionTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        }
+      ]
+    },
+    {
+      "name": "FactionAccount",
+      "program": "c4-sage-primary",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionAccount"
+        },
+        {
+          "kind": "account",
+          "type": "Game",
+          "role": "game.key()"
+        },
+        {
+          "kind": "field",
+          "type": "u16",
+          "role": "factionId",
+          "note": "LE. Sample DH5rqiA3 = faction 5."
+        }
+      ],
+      "parents": [
+        "Game"
+      ],
+      "proof": "LIVE 2026-08-26 catalog sample match factionId=5.",
+      "officialSeeds": [
+        {
+          "kind": "literal",
+          "value": "FactionAccount"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        }
+      ]
+    },
+    {
+      "name": "LoyaltyAtlasBank",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "LoyaltyAtlasBank"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "profile"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 self-derive GGYqN2NP64Cou1rrYRJ5VhwJ8a5aERZaTx1JGgu7YR6X bump 255",
+      "address": "GGYqN2NP64Cou1rrYRJ5VhwJ8a5aERZaTx1JGgu7YR6X",
+      "bump": 255
+    },
+    {
+      "name": "LoyaltyContribution",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "LoyaltyContribution"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "profile"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        },
+        {
+          "kind": "field",
+          "type": "u64",
+          "role": "epochIndex"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 self-derive Eg2A1uAGF3BrNzZFce7xvfJE4Q8MZc4PQzHgHTf3JtFd bump 254",
+      "address": "Eg2A1uAGF3BrNzZFce7xvfJE4Q8MZc4PQzHgHTf3JtFd",
+      "bump": 254
+    },
+    {
+      "name": "LoyaltyEpoch",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "LoyaltyEpoch"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        },
+        {
+          "kind": "field",
+          "type": "u64",
+          "role": "epochIndex"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 self-derive EWN3jacumHM2HpYPQ6u4hPpfprKG7PNBEKXFZGnKHMpo bump 252",
+      "address": "EWN3jacumHM2HpYPQ6u4hPpfprKG7PNBEKXFZGnKHMpo",
+      "bump": 252
+    },
+    {
+      "name": "CelestialBody",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "CelestialBody"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "game"
+        },
+        {
+          "kind": "field",
+          "type": "celestialBodyId",
+          "role": "id"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 derive Gd5uriUuhdDnd2MT6G42VdwZ6FrqA4xw7MSgXxCUd2JC bump 254 1106 B rpc1.z.ink",
+      "address": "Gd5uriUuhdDnd2MT6G42VdwZ6FrqA4xw7MSgXxCUd2JC",
+      "bump": 254
+    },
+    {
+      "name": "Recipe",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "Recipe"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "recipeId",
+          "role": "recipeId"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 derive 4QiymPCfwwTRJ79GJ2QL6TcJodT1pwWF2bhVrA6P89Jw bump 253 361 B rpc1.z.ink",
+      "address": "4QiymPCfwwTRJ79GJ2QL6TcJodT1pwWF2bhVrA6P89Jw",
+      "bump": 253
+    },
+    {
+      "name": "FleetCrewBinding",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FleetCrewBinding"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "fleet"
+        }
+      ]
+    },
+    {
+      "name": "CrewRoster",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "CrewRoster"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "character"
+        },
+        {
+          "kind": "field",
+          "type": "u16",
+          "role": "pageIndex"
+        }
+      ]
+    },
+    {
+      "name": "EncounterCommit",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "EncounterCommit"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "character"
+        }
+      ]
+    },
+    {
+      "name": "EncounterPool",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "EncounterPool"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "regionId",
+          "role": "regionId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "minorFaction"
+        }
+      ]
+    },
+    {
+      "name": "EncounterTreasury",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "EncounterTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "regionId",
+          "role": "regionId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "minorFaction"
+        }
+      ]
+    },
+    {
+      "name": "EphemeralMarket",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "EphemeralMarket"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "ownerCharacter"
+        }
+      ]
+    },
+    {
+      "name": "FactionConfig",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionConfig"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        }
+      ]
+    },
+    {
+      "name": "FactionEpochMeter",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionEpochMeter"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        }
+      ]
+    },
+    {
+      "name": "FactionMarket",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionMarket"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "system"
+        },
+        {
+          "kind": "field",
+          "type": "u64",
+          "role": "starbaseSeqId"
+        }
+      ]
+    },
+    {
+      "name": "FactionOwnership",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionOwnership"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "u8",
+          "role": "assetKind"
+        },
+        {
+          "kind": "field",
+          "type": "arrayTypeNode",
+          "role": "assetKey"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 self-derive ALKoPV5YgrNa6ZtbbNUTTy482ToSF1RfJiQj66NLvGiP bump 254",
+      "address": "ALKoPV5YgrNa6ZtbbNUTTy482ToSF1RfJiQj66NLvGiP",
+      "bump": 254
+    },
+    {
+      "name": "FactionStanding",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "FactionStanding"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "profile"
+        },
+        {
+          "kind": "field",
+          "type": "minorFactionId",
+          "role": "factionId"
+        }
+      ]
+    },
+    {
+      "name": "ShipDefinitionUpload",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "ShipDefinitionUpload"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "shipId",
+          "role": "shipId"
+        }
+      ]
+    },
+    {
+      "name": "LocalMarket",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "LocalMarket"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "system"
+        },
+        {
+          "kind": "field",
+          "type": "cargoId",
+          "role": "cargoId"
+        },
+        {
+          "kind": "field",
+          "type": "u64",
+          "role": "starbaseSeqId"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 self-derive sample Cx2gNp5ReMp7H1edQ6dAsHTQZh3YzWH1pwpDr9vseRtK bump 255",
+      "address": "Cx2gNp5ReMp7H1edQ6dAsHTQZh3YzWH1pwpDr9vseRtK",
+      "bump": 255
+    },
+    {
+      "name": "MissionStakeVault",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "MissionVault"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "mission"
+        }
+      ]
+    },
+    {
+      "name": "MissionTreasury",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "MissionTreasury"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "regionId",
+          "role": "regionId"
+        }
+      ]
+    },
+    {
+      "name": "OutlawFlag",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "outlaw_flag"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "profile"
+        },
+        {
+          "kind": "field",
+          "type": "u8",
+          "role": "faction"
+        }
+      ]
+    },
+    {
+      "name": "RegionOrderAnchor",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "RegionOrderAnchor"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "regionId",
+          "role": "regionId"
+        }
+      ]
+    },
+    {
+      "name": "RegionBorderUpload",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "RegionBorderUpload"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "regionId",
+          "role": "regionId"
+        }
+      ]
+    },
+    {
+      "name": "ScanPattern",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "ScanPattern"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "scanPatternId",
+          "role": "scanPatternId"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 derive EmdaeJom1nKZBX9nGgCksbTQeMz9MkFJHDoa4RTgpn1y bump 253 2930 B rpc1.z.ink",
+      "address": "EmdaeJom1nKZBX9nGgCksbTQeMz9MkFJHDoa4RTgpn1y",
+      "bump": 253
+    },
+    {
+      "name": "ScanPatternNoiseMapUpload",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "ScanPatternNoiseMapUpload"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "scanPatternId",
+          "role": "scanPatternId"
+        }
+      ]
+    },
+    {
+      "name": "StarSystem",
+      "program": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "isPda": true,
+      "seeds": [
+        {
+          "kind": "literal",
+          "value": "StarSystem"
+        },
+        {
+          "kind": "account",
+          "type": "Pubkey",
+          "role": "gameId"
+        },
+        {
+          "kind": "field",
+          "type": "systemId",
+          "role": "systemId"
+        }
+      ],
+      "proof": "LIVE 2026-08-29 derive E7LWcwKYyBjXWQyQrTnMUrVvTWuJ3bpTBtSoEd8rnaJQ bump 253 2468 B rpc1.z.ink",
+      "address": "E7LWcwKYyBjXWQyQrTnMUrVvTWuJ3bpTBtSoEd8rnaJQ",
+      "bump": 253
+    }
+  ],
+  "notPda": [
+    {
+      "name": "Profile",
+      "program": "c4-profile",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair.",
+      "children": [
+        "PlayerName",
+        "ProfileFactionAccount",
+        "Character",
+        "Fleet"
+      ]
+    },
+    {
+      "name": "Game",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "TypeName+game does not reproduce HKsvhEMm. Singleton, persist pubkey.",
+      "children": [
+        "Character",
+        "Fleet",
+        "RegionTracker",
+        "FactionRelationTracker",
+        "AtlasRewardRegistry",
+        "AtlasRewardTreasury",
+        "AtlasRewardConfig",
+        "CargoDefinitionsCache",
+        "FactionEconomicsConfig",
+        "KingSystemTracker",
+        "CurrencyConfigCache",
+        "FactionTreasury",
+        "FactionAccount"
+      ]
+    },
+    {
+      "name": "Loot",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair."
+    },
+    {
+      "name": "CraftingProcess",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair."
+    },
+    {
+      "name": "ClaimStakeInstance",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair."
+    },
+    {
+      "name": "CraftingHabInstance",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair."
+    },
+    {
+      "name": "StarbaseUpgradeProcess",
+      "program": "c4-sage-primary",
+      "isPda": false,
+      "reason": "Not a PDA; generated keypair."
+    }
+  ]
+}

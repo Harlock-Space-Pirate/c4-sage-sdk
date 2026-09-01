@@ -1,0 +1,7 @@
+C4 SAGE community SDK
+Copyright 2026 LEEKS / Produce Bandit ltd
+
+Not affiliated with ATMTA or Star Atlas. The game, names, and on-chain
+programs remain theirs. This toolkit is built from public Zink chain data
+and published C4 field names so the community can build readers, UIs, and
+bots. We do not store wallet secret keys.

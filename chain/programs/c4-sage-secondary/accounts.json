@@ -1,0 +1,4930 @@
+{
+  "programId": "HYEWZXXzMyrnN89ASYPVHHdFdgvrgV8diFLv6P2wEwFN",
+  "name": "c4-sage-secondary",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-28T09:29:28Z",
+  "discriminatorScheme": "sha256('account:'+TypeName)[:8]",
+  "framework": "star-frame",
+  "notes": [
+    "Same Star Frame type names/discs as primary. Instance census not repeated. Do not reuse primary liveCount/sample."
+  ],
+  "accountTypes": [
+    {
+      "name": "AtlasRewardConfig",
+      "discriminator": "85a80b4f536dfda2",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "enabled",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "pad0",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "configVersion",
+          "type": "u32",
+          "offset": 44
+        },
+        {
+          "name": "effectiveEpoch",
+          "type": "u64",
+          "offset": 48
+        },
+        {
+          "name": "createdAt",
+          "type": "i64",
+          "offset": 56
+        },
+        {
+          "name": "sourceFlags",
+          "type": "u16",
+          "offset": 64
+        },
+        {
+          "name": "pad1",
+          "type": "[u8;2]",
+          "offset": 66
+        },
+        {
+          "name": "epochLenSecs",
+          "type": "u32",
+          "offset": 68
+        },
+        {
+          "name": "claimSettlementWindowSecs",
+          "type": "u32",
+          "offset": 72
+        },
+        {
+          "name": "atlasBankInactivityExpirySecs",
+          "type": "u64",
+          "offset": 76
+        },
+        {
+          "name": "rewardLootReclaimSecs",
+          "type": "u64",
+          "offset": 84
+        },
+        {
+          "name": "factionPoolLever",
+          "type": "u64",
+          "offset": 92
+        },
+        {
+          "name": "kingSystemCurve",
+          "type": "[[u64;10];7]",
+          "offset": 100
+        },
+        {
+          "name": "pveLpRateBps",
+          "type": "u32",
+          "offset": 660
+        },
+        {
+          "name": "pvpMedallionRateBps",
+          "type": "u32",
+          "offset": 664
+        },
+        {
+          "name": "salvageEvRateBps",
+          "type": "u32",
+          "offset": 668
+        },
+        {
+          "name": "repairKitLpRate",
+          "type": "u64",
+          "offset": 672
+        },
+        {
+          "name": "lossModelTargetBps",
+          "type": "[u16;3]",
+          "offset": 680
+        },
+        {
+          "name": "starbaseDestructionMedallions",
+          "type": "[u64;7]",
+          "offset": 686
+        },
+        {
+          "name": "cargoId",
+          "type": "u16",
+          "offset": 742
+        },
+        {
+          "name": "generation",
+          "type": "u16",
+          "offset": 744
+        },
+        {
+          "name": "buyerPrice",
+          "type": "u64",
+          "offset": 746
+        },
+        {
+          "name": "medallionBuybackCapPerEpoch",
+          "type": "u64",
+          "offset": 754
+        },
+        {
+          "name": "rewardReserveLowBalanceThreshold",
+          "type": "u64",
+          "offset": 762
+        },
+        {
+          "name": "upgradeLpRateCount",
+          "type": "u8",
+          "offset": 770
+        },
+        {
+          "name": "salvageEntryCount",
+          "type": "u8",
+          "offset": 771
+        },
+        {
+          "name": "pad2",
+          "type": "[u8;6]",
+          "offset": 772
+        },
+        {
+          "name": "upgradeLpRates",
+          "type": "[upgradeLpRate;32]",
+          "offset": 778
+        },
+        {
+          "name": "salvageEntries",
+          "type": "[salvageRewardEntry;32]",
+          "offset": 1098
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;64]",
+          "offset": 1546
+        }
+      ]
+    },
+    {
+      "name": "AtlasRewardRegistry",
+      "discriminator": "cab7316c23f11c1f",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "currentEpoch",
+          "type": "u64",
+          "offset": 42
+        },
+        {
+          "name": "currentEpochStartedAt",
+          "type": "i64",
+          "offset": 50
+        },
+        {
+          "name": "currentEpochEndsAt",
+          "type": "i64",
+          "offset": 58
+        },
+        {
+          "name": "initialEpochOffsetSecs",
+          "type": "i64",
+          "offset": 66
+        },
+        {
+          "name": "activeConfigVersion",
+          "type": "u32",
+          "offset": 74
+        },
+        {
+          "name": "pendingConfigVersion",
+          "type": "u32",
+          "offset": 78
+        },
+        {
+          "name": "pendingEffectiveEpoch",
+          "type": "u64",
+          "offset": 82
+        },
+        {
+          "name": "latestConfigVersion",
+          "type": "u32",
+          "offset": 90
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;32]",
+          "offset": 94
+        }
+      ]
+    },
+    {
+      "name": "AtlasRewardTreasury",
+      "discriminator": "b6a423b05d60ead6",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "reserves",
+          "type": "Map<cargoId,u64>",
+          "offset": 42
+        }
+      ]
+    },
+    {
+      "name": "CargoDefinitionsCache",
+      "discriminator": "f8f77509cb1e1f92",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 41
+        },
+        {
+          "name": "cargoTypeCache",
+          "type": "Map<cargoId,cargoTypeCache>",
+          "offset": 42
+        }
+      ]
+    },
+    {
+      "name": "CelestialBody",
+      "discriminator": "b9251d7a0ed88e6d",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "id",
+          "type": "u16",
+          "offset": 9
+        },
+        {
+          "name": "name",
+          "type": "[u8;64]",
+          "offset": 11
+        },
+        {
+          "name": "game",
+          "type": "Pubkey",
+          "offset": 75
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 107
+        },
+        {
+          "name": "systemSeqId",
+          "type": "u64",
+          "offset": 139
+        },
+        {
+          "name": "lastSyncTimestamp",
+          "type": "i64",
+          "offset": 147
+        },
+        {
+          "name": "celestialBodyType",
+          "type": "enum",
+          "offset": 155
+        }
+      ]
+    },
+    {
+      "name": "Character",
+      "discriminator": "8c73a524f1996654",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "playerProfile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 73
+        },
+        {
+          "name": "lastCheckInTime",
+          "type": "i64",
+          "offset": 74
+        },
+        {
+          "name": "checkInStreak",
+          "type": "u32",
+          "offset": 82
+        },
+        {
+          "name": "xpInfo.seqId",
+          "type": "u32",
+          "offset": 86
+        },
+        {
+          "name": "xpInfo.councilRank.spent",
+          "type": "u64",
+          "offset": 90
+        },
+        {
+          "name": "xpInfo.councilRank.earned",
+          "type": "u64",
+          "offset": 98
+        },
+        {
+          "name": "xpInfo.councilRank.level",
+          "type": "u32",
+          "offset": 106
+        },
+        {
+          "name": "xpInfo.dailyXp.spent",
+          "type": "u64",
+          "offset": 110
+        },
+        {
+          "name": "xpInfo.dailyXp.earned",
+          "type": "u64",
+          "offset": 118
+        },
+        {
+          "name": "xpInfo.dailyXp.level",
+          "type": "u32",
+          "offset": 126
+        },
+        {
+          "name": "xpInfo.pilot.spent",
+          "type": "u64",
+          "offset": 130
+        },
+        {
+          "name": "xpInfo.pilot.earned",
+          "type": "u64",
+          "offset": 138
+        },
+        {
+          "name": "xpInfo.pilot.level",
+          "type": "u32",
+          "offset": 146
+        },
+        {
+          "name": "xpInfo.dataRunner.spent",
+          "type": "u64",
+          "offset": 150
+        },
+        {
+          "name": "xpInfo.dataRunner.earned",
+          "type": "u64",
+          "offset": 158
+        },
+        {
+          "name": "xpInfo.dataRunner.level",
+          "type": "u32",
+          "offset": 166
+        },
+        {
+          "name": "xpInfo.mining.spent",
+          "type": "u64",
+          "offset": 170
+        },
+        {
+          "name": "xpInfo.mining.earned",
+          "type": "u64",
+          "offset": 178
+        },
+        {
+          "name": "xpInfo.mining.level",
+          "type": "u32",
+          "offset": 186
+        },
+        {
+          "name": "xpInfo.building.spent",
+          "type": "u64",
+          "offset": 190
+        },
+        {
+          "name": "xpInfo.building.earned",
+          "type": "u64",
+          "offset": 198
+        },
+        {
+          "name": "xpInfo.building.level",
+          "type": "u32",
+          "offset": 206
+        },
+        {
+          "name": "xpInfo.crafting.spent",
+          "type": "u64",
+          "offset": 210
+        },
+        {
+          "name": "xpInfo.crafting.earned",
+          "type": "u64",
+          "offset": 218
+        },
+        {
+          "name": "xpInfo.crafting.level",
+          "type": "u32",
+          "offset": 226
+        },
+        {
+          "name": "xpInfo.combat.spent",
+          "type": "u64",
+          "offset": 230
+        },
+        {
+          "name": "xpInfo.combat.earned",
+          "type": "u64",
+          "offset": 238
+        },
+        {
+          "name": "xpInfo.combat.level",
+          "type": "u32",
+          "offset": 246
+        },
+        {
+          "name": "councilRankLevelCarry",
+          "type": "u32",
+          "offset": 250
+        },
+        {
+          "name": "atlas",
+          "type": "u64",
+          "offset": 254
+        },
+        {
+          "name": "claimStakes",
+          "type": "u32",
+          "offset": 262
+        },
+        {
+          "name": "craftingHabs",
+          "type": "u32",
+          "offset": 266
+        },
+        {
+          "name": "fleets",
+          "type": "u32",
+          "offset": 270
+        },
+        {
+          "name": "lastAccrualTime",
+          "type": "i64",
+          "offset": 274
+        },
+        {
+          "name": "available",
+          "type": "u16",
+          "offset": 282
+        },
+        {
+          "name": "fractionalCarry",
+          "type": "[u8;6]",
+          "offset": 284
+        },
+        {
+          "name": "characterModifiers.seqId",
+          "type": "u32",
+          "offset": 290
+        },
+        {
+          "name": "unupdatedCount",
+          "type": "u16",
+          "offset": 294
+        },
+        {
+          "name": "unlockedNodes",
+          "type": "setTypeNode",
+          "offset": 296
+        }
+      ],
+      "createdBy": [
+        "register_character"
+      ],
+      "mutatedBy": [
+        "sync_character"
+      ]
+    },
+    {
+      "name": "ClaimStakeInstance",
+      "discriminator": "c8263e33ff9d28a3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "owner",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "celestialBodyId",
+          "type": "Pubkey",
+          "offset": 73
+        },
+        {
+          "name": "claimStakeDefinitionId",
+          "type": "u16",
+          "offset": 105
+        },
+        {
+          "name": "claimStakeDefinitionSeqId",
+          "type": "u32",
+          "offset": 107
+        },
+        {
+          "name": "buildingDefinitionSeqId",
+          "type": "u32",
+          "offset": 111
+        },
+        {
+          "name": "systemSeqId",
+          "type": "u64",
+          "offset": 115
+        },
+        {
+          "name": "lastRentClockTimestamp",
+          "type": "i64",
+          "offset": 123
+        },
+        {
+          "name": "constructionRemaining",
+          "type": "i64",
+          "offset": 131
+        },
+        {
+          "name": "constructionProgressTimestamp",
+          "type": "i64",
+          "offset": 139
+        },
+        {
+          "name": "rentBalance",
+          "type": "u64",
+          "offset": 147
+        },
+        {
+          "name": "neededCrew",
+          "type": "u16",
+          "offset": 155
+        },
+        {
+          "name": "buildings",
+          "type": "Map<buildingId,u32>",
+          "offset": 157
+        }
+      ]
+    },
+    {
+      "name": "CraftingHabInstance",
+      "discriminator": "1a7fed64ac09331f",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "owner",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 73
+        },
+        {
+          "name": "craftingHabDefinitionId",
+          "type": "u16",
+          "offset": 105
+        },
+        {
+          "name": "craftingHabDefinitionSeqId",
+          "type": "u32",
+          "offset": 107
+        },
+        {
+          "name": "buildingDefinitionSeqId",
+          "type": "u32",
+          "offset": 111
+        },
+        {
+          "name": "systemSeqId",
+          "type": "u64",
+          "offset": 115
+        },
+        {
+          "name": "lastRentClockTimestamp",
+          "type": "i64",
+          "offset": 123
+        },
+        {
+          "name": "constructionRemaining",
+          "type": "i64",
+          "offset": 131
+        },
+        {
+          "name": "constructionProgressTimestamp",
+          "type": "i64",
+          "offset": 139
+        },
+        {
+          "name": "rentBalance",
+          "type": "u64",
+          "offset": 147
+        },
+        {
+          "name": "neededCrew",
+          "type": "u16",
+          "offset": 155
+        },
+        {
+          "name": "craftingJobConcurrency",
+          "type": "u16",
+          "offset": 157
+        },
+        {
+          "name": "craftingJobs",
+          "type": "u16",
+          "offset": 159
+        },
+        {
+          "name": "craftingEfficiencyModifier",
+          "type": "u32",
+          "offset": 161
+        },
+        {
+          "name": "craftingSpeedModifier",
+          "type": "u32",
+          "offset": 165
+        },
+        {
+          "name": "crewCountModifier",
+          "type": "u32",
+          "offset": 169
+        },
+        {
+          "name": "craftingFeeModifier",
+          "type": "u32",
+          "offset": 173
+        },
+        {
+          "name": "habBuildings",
+          "type": "Map<buildingId,u32>",
+          "offset": 177
+        }
+      ]
+    },
+    {
+      "name": "CraftingProcess",
+      "discriminator": "69b80569af700da9",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "recipe",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 73
+        },
+        {
+          "name": "starbasePlayer",
+          "type": "Pubkey",
+          "offset": 105
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 137
+        },
+        {
+          "name": "craftingHab",
+          "type": "Pubkey",
+          "offset": 145
+        },
+        {
+          "name": "quantity",
+          "type": "u64",
+          "offset": 177
+        },
+        {
+          "name": "numCrew",
+          "type": "u32",
+          "offset": 185
+        },
+        {
+          "name": "startTime",
+          "type": "i64",
+          "offset": 189
+        },
+        {
+          "name": "endTime",
+          "type": "i64",
+          "offset": 197
+        },
+        {
+          "name": "feeEscrow",
+          "type": "u64",
+          "offset": 205
+        },
+        {
+          "name": "seqId",
+          "type": "u16",
+          "offset": 213
+        },
+        {
+          "name": "storageCost",
+          "type": "u64",
+          "offset": 215
+        },
+        {
+          "name": "amounts",
+          "type": "Map<cargoId,u64>",
+          "offset": 223
+        }
+      ],
+      "sample": "7A46C24rjyjqxczSqH5qtiaxWVKKtTg7V6dJ7qNPcCsy"
+    },
+    {
+      "name": "CurrencyConfigCache",
+      "discriminator": "e7cb8e6cd2ea07bf",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 41
+        },
+        {
+          "name": "atlas.currentEpoch",
+          "type": "u64",
+          "offset": 42
+        },
+        {
+          "name": "atlas.totalWithdrawn",
+          "type": "u64",
+          "offset": 50
+        },
+        {
+          "name": "polis.currentEpoch",
+          "type": "u64",
+          "offset": 58
+        },
+        {
+          "name": "polis.totalWithdrawn",
+          "type": "u64",
+          "offset": 66
+        },
+        {
+          "name": "atlasVault",
+          "type": "u64",
+          "offset": 74
+        },
+        {
+          "name": "daoAtlasVault",
+          "type": "u64",
+          "offset": 82
+        }
+      ],
+      "mutatedBy": [
+        "warp_lane"
+      ]
+    },
+    {
+      "name": "FactionAccount",
+      "discriminator": "5e915f21ab6fb807",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "alignment",
+          "type": "faction",
+          "offset": 44
+        },
+        {
+          "name": "capabilityFlags",
+          "type": "u32",
+          "offset": 45
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 49
+        },
+        {
+          "name": "authorityBump",
+          "type": "u8",
+          "offset": 50
+        },
+        {
+          "name": "controller",
+          "type": "Pubkey",
+          "offset": 51
+        },
+        {
+          "name": "maxAllies",
+          "type": "u8",
+          "offset": 83
+        },
+        {
+          "name": "treasuryCount",
+          "type": "u8",
+          "offset": 84
+        },
+        {
+          "name": "homeRegion",
+          "type": "u16",
+          "offset": 85
+        },
+        {
+          "name": "nameHash",
+          "type": "[u8;32]",
+          "offset": 87
+        },
+        {
+          "name": "contentUriHash",
+          "type": "[u8;32]",
+          "offset": 119
+        },
+        {
+          "name": "createdAt",
+          "type": "i64",
+          "offset": 151
+        },
+        {
+          "name": "operatorProfile",
+          "type": "Pubkey",
+          "offset": 159
+        },
+        {
+          "name": "lastCaptureAt",
+          "type": "i64",
+          "offset": 191
+        },
+        {
+          "name": "npcFleetCount",
+          "type": "u16",
+          "offset": 199
+        },
+        {
+          "name": "maxNpcFleets",
+          "type": "u16",
+          "offset": 201
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;14]",
+          "offset": 203
+        }
+      ]
+    },
+    {
+      "name": "FactionEconomicsConfig",
+      "discriminator": "ea6e42b0033088e3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "npcMintCostAtlas",
+          "type": "u64",
+          "offset": 42
+        },
+        {
+          "name": "npcRespawnCostAtlas",
+          "type": "u64",
+          "offset": 50
+        },
+        {
+          "name": "captureCostAtlas",
+          "type": "u32",
+          "offset": 58
+        },
+        {
+          "name": "factionCaptureCooldownSecs",
+          "type": "i64",
+          "offset": 62
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;10]",
+          "offset": 70
+        }
+      ]
+    },
+    {
+      "name": "FactionOwnership",
+      "discriminator": "50c73351876463e3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "assetKind",
+          "type": "u8",
+          "offset": 42
+        },
+        {
+          "name": "assetKey",
+          "type": "[u8;32]",
+          "offset": 43
+        },
+        {
+          "name": "controllingFaction",
+          "type": "u16",
+          "offset": 75
+        },
+        {
+          "name": "previousController",
+          "type": "u16",
+          "offset": 77
+        },
+        {
+          "name": "capturedAt",
+          "type": "i64",
+          "offset": 79
+        },
+        {
+          "name": "contestedUntil",
+          "type": "i64",
+          "offset": 87
+        },
+        {
+          "name": "capturedSeqId",
+          "type": "u64",
+          "offset": 95
+        },
+        {
+          "name": "directiveBlock",
+          "type": "[u8;28]",
+          "offset": 103
+        },
+        {
+          "name": "lastYieldTickTs",
+          "type": "i64",
+          "offset": 131
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;6]",
+          "offset": 139
+        }
+      ],
+      "createdBy": [
+        "admin_set_npc_fleet_id"
+      ]
+    },
+    {
+      "name": "FactionRelationTracker",
+      "discriminator": "07e91c0066d082fc",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "combatGatingEnabled",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "territoryAccessEnabled",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "crossFactionEconomicsEnabled",
+          "type": "u8",
+          "offset": 44
+        },
+        {
+          "name": "pad0",
+          "type": "u8",
+          "offset": 45
+        },
+        {
+          "name": "alliedTollBps",
+          "type": "u16",
+          "offset": 46
+        },
+        {
+          "name": "neutralTollBps",
+          "type": "u16",
+          "offset": 48
+        },
+        {
+          "name": "ceasefireMinDurationSecs",
+          "type": "i64",
+          "offset": 50
+        },
+        {
+          "name": "reCeasefireCooldownSecs",
+          "type": "i64",
+          "offset": 58
+        },
+        {
+          "name": "dynamicCaptureEnabled",
+          "type": "u8",
+          "offset": 66
+        },
+        {
+          "name": "contestedWindowSecs",
+          "type": "u32",
+          "offset": 67
+        },
+        {
+          "name": "nemesisActive",
+          "type": "u8",
+          "offset": 71
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;2]",
+          "offset": 72
+        },
+        {
+          "name": "relations",
+          "type": "Map<factionPair,relationEntry>",
+          "offset": 74
+        }
+      ]
+    },
+    {
+      "name": "FactionTreasury",
+      "discriminator": "41752c05814f5b31",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "vault",
+          "type": "u64",
+          "offset": 44
+        },
+        {
+          "name": "epochStart",
+          "type": "i64",
+          "offset": 52
+        },
+        {
+          "name": "epochLenSecs",
+          "type": "i64",
+          "offset": 60
+        },
+        {
+          "name": "atlasOutThisEpoch",
+          "type": "u64",
+          "offset": 68
+        },
+        {
+          "name": "atlasOutCapPerEpoch",
+          "type": "u64",
+          "offset": 76
+        },
+        {
+          "name": "reserves",
+          "type": "Map<cargoId,u64>",
+          "offset": 84
+        }
+      ]
+    },
+    {
+      "name": "Fleet",
+      "discriminator": "6dcffb306a0288a3",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "ownerProfile",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "subProfile",
+          "type": "Pubkey",
+          "offset": 74
+        },
+        {
+          "name": "subProfileInvalidator",
+          "type": "Pubkey",
+          "offset": 106
+        },
+        {
+          "name": "faction",
+          "type": "faction",
+          "offset": 138
+        },
+        {
+          "name": "npcFactionId",
+          "type": "u16",
+          "offset": 139
+        },
+        {
+          "name": "fleetLabel",
+          "type": "[u8;64]",
+          "offset": 141
+        },
+        {
+          "name": "total",
+          "type": "u32",
+          "offset": 205
+        },
+        {
+          "name": "xxSmall",
+          "type": "u16",
+          "offset": 209
+        },
+        {
+          "name": "xSmall",
+          "type": "u16",
+          "offset": 211
+        },
+        {
+          "name": "small",
+          "type": "u16",
+          "offset": 213
+        },
+        {
+          "name": "medium",
+          "type": "u16",
+          "offset": 215
+        },
+        {
+          "name": "large",
+          "type": "u16",
+          "offset": 217
+        },
+        {
+          "name": "capital",
+          "type": "u16",
+          "offset": 219
+        },
+        {
+          "name": "commander",
+          "type": "u16",
+          "offset": 221
+        },
+        {
+          "name": "titan",
+          "type": "u16",
+          "offset": 223
+        },
+        {
+          "name": "warpCooldownExpiresAt",
+          "type": "i64",
+          "offset": 225
+        },
+        {
+          "name": "scanCooldownExpiresAt",
+          "type": "i64",
+          "offset": 233
+        },
+        {
+          "name": "subwarpSpeed",
+          "type": "u32",
+          "offset": 241
+        },
+        {
+          "name": "warpSpeed",
+          "type": "u32",
+          "offset": 245
+        },
+        {
+          "name": "warpLaneSpeed",
+          "type": "u32",
+          "offset": 249
+        },
+        {
+          "name": "maxWarpDistance",
+          "type": "u16",
+          "offset": 253
+        },
+        {
+          "name": "warpCoolDown",
+          "type": "u16",
+          "offset": 255
+        },
+        {
+          "name": "subwarpFuelConsumptionRate",
+          "type": "u32",
+          "offset": 257
+        },
+        {
+          "name": "warpFuelConsumptionRate",
+          "type": "u32",
+          "offset": 261
+        },
+        {
+          "name": "planetExitFuelAmount",
+          "type": "u32",
+          "offset": 265
+        },
+        {
+          "name": "warpXpRate",
+          "type": "u32",
+          "offset": 269
+        },
+        {
+          "name": "subwarpXpRate",
+          "type": "u32",
+          "offset": 273
+        },
+        {
+          "name": "cargoCapacity",
+          "type": "u64",
+          "offset": 277
+        },
+        {
+          "name": "fuelCapacity",
+          "type": "u64",
+          "offset": 285
+        },
+        {
+          "name": "ammoCapacity",
+          "type": "u64",
+          "offset": 293
+        },
+        {
+          "name": "stats.cargoStats.ammoConsumptionRate",
+          "type": "u32",
+          "offset": 301
+        },
+        {
+          "name": "foodConsumptionRate",
+          "type": "u32",
+          "offset": 305
+        },
+        {
+          "name": "miningRate",
+          "type": "u32",
+          "offset": 309
+        },
+        {
+          "name": "loadRate",
+          "type": "u32",
+          "offset": 313
+        },
+        {
+          "name": "stats.combatStats.ap",
+          "type": "u32",
+          "offset": 317
+        },
+        {
+          "name": "stats.combatStats.hp",
+          "type": "u32",
+          "offset": 321
+        },
+        {
+          "name": "stats.combatStats.sp",
+          "type": "u32",
+          "offset": 325
+        },
+        {
+          "name": "stats.combatStats.ammoConsumptionRate",
+          "type": "u32",
+          "offset": 329
+        },
+        {
+          "name": "apRegenRate",
+          "type": "u32",
+          "offset": 333
+        },
+        {
+          "name": "shieldRechargeRate",
+          "type": "u32",
+          "offset": 337
+        },
+        {
+          "name": "repairRate",
+          "type": "u32",
+          "offset": 341
+        },
+        {
+          "name": "repairAbility",
+          "type": "u32",
+          "offset": 345
+        },
+        {
+          "name": "repairEfficiency",
+          "type": "u32",
+          "offset": 349
+        },
+        {
+          "name": "repairCost",
+          "type": "u32",
+          "offset": 353
+        },
+        {
+          "name": "lootRate",
+          "type": "u32",
+          "offset": 357
+        },
+        {
+          "name": "shieldBreakDelay",
+          "type": "u16",
+          "offset": 361
+        },
+        {
+          "name": "warpSpoolTime",
+          "type": "u16",
+          "offset": 363
+        },
+        {
+          "name": "damageKinetic",
+          "type": "u32",
+          "offset": 365
+        },
+        {
+          "name": "damageKineticVariance",
+          "type": "u32",
+          "offset": 369
+        },
+        {
+          "name": "damageEnergy",
+          "type": "u32",
+          "offset": 373
+        },
+        {
+          "name": "damageEnergyVariance",
+          "type": "u32",
+          "offset": 377
+        },
+        {
+          "name": "damageEmp",
+          "type": "u32",
+          "offset": 381
+        },
+        {
+          "name": "damageEmpVariance",
+          "type": "u32",
+          "offset": 385
+        },
+        {
+          "name": "damageSuperchill",
+          "type": "u32",
+          "offset": 389
+        },
+        {
+          "name": "damageSuperchillVariance",
+          "type": "u32",
+          "offset": 393
+        },
+        {
+          "name": "damageShockwave",
+          "type": "u32",
+          "offset": 397
+        },
+        {
+          "name": "damageShockwaveVariance",
+          "type": "u32",
+          "offset": 401
+        },
+        {
+          "name": "damageGraygoo",
+          "type": "u32",
+          "offset": 405
+        },
+        {
+          "name": "damageGraygooVariance",
+          "type": "u32",
+          "offset": 409
+        },
+        {
+          "name": "damageHeat",
+          "type": "u32",
+          "offset": 413
+        },
+        {
+          "name": "damageHeatVariance",
+          "type": "u32",
+          "offset": 417
+        },
+        {
+          "name": "damageBomb",
+          "type": "u32",
+          "offset": 421
+        },
+        {
+          "name": "damageBombVariance",
+          "type": "u32",
+          "offset": 425
+        },
+        {
+          "name": "counterDecoy",
+          "type": "u32",
+          "offset": 429
+        },
+        {
+          "name": "counterEnergyCapacitor",
+          "type": "u32",
+          "offset": 433
+        },
+        {
+          "name": "counterFireSuppressor",
+          "type": "u32",
+          "offset": 437
+        },
+        {
+          "name": "counterFlare",
+          "type": "u32",
+          "offset": 441
+        },
+        {
+          "name": "counterHealingNanobots",
+          "type": "u32",
+          "offset": 445
+        },
+        {
+          "name": "counterMine",
+          "type": "u32",
+          "offset": 449
+        },
+        {
+          "name": "counterNegativeRemPlating",
+          "type": "u32",
+          "offset": 453
+        },
+        {
+          "name": "counterWarmingPlates",
+          "type": "u32",
+          "offset": 457
+        },
+        {
+          "name": "counterFaradayShielding",
+          "type": "u32",
+          "offset": 461
+        },
+        {
+          "name": "stealthPower",
+          "type": "u32",
+          "offset": 465
+        },
+        {
+          "name": "hitChance",
+          "type": "u32",
+          "offset": 469
+        },
+        {
+          "name": "aimAbility",
+          "type": "u32",
+          "offset": 473
+        },
+        {
+          "name": "critChance",
+          "type": "u32",
+          "offset": 477
+        },
+        {
+          "name": "critMultiplier",
+          "type": "u32",
+          "offset": 481
+        },
+        {
+          "name": "fuelConsumptionRate",
+          "type": "u32",
+          "offset": 485
+        },
+        {
+          "name": "missileDamage",
+          "type": "u32",
+          "offset": 489
+        },
+        {
+          "name": "missileFireRate",
+          "type": "u32",
+          "offset": 493
+        },
+        {
+          "name": "requiredCrew",
+          "type": "u16",
+          "offset": 497
+        },
+        {
+          "name": "passengerCapacity",
+          "type": "u16",
+          "offset": 499
+        },
+        {
+          "name": "respawnTimeWithoutFee",
+          "type": "u16",
+          "offset": 501
+        },
+        {
+          "name": "respawnTimeWithFee",
+          "type": "u16",
+          "offset": 503
+        },
+        {
+          "name": "respawnFee",
+          "type": "u64",
+          "offset": 505
+        },
+        {
+          "name": "scanCoolDown",
+          "type": "u32",
+          "offset": 513
+        },
+        {
+          "name": "scanPower",
+          "type": "u32",
+          "offset": 517
+        },
+        {
+          "name": "scanCost",
+          "type": "u32",
+          "offset": 521
+        },
+        {
+          "name": "scanBonus",
+          "type": "i32",
+          "offset": 525
+        },
+        {
+          "name": "lpValue",
+          "type": "u32",
+          "offset": 529
+        },
+        {
+          "name": "medallionValue",
+          "type": "u32",
+          "offset": 533
+        },
+        {
+          "name": "xpValue",
+          "type": "u32",
+          "offset": 537
+        },
+        {
+          "name": "fuelTank.cargoId",
+          "type": "u16",
+          "offset": 541
+        },
+        {
+          "name": "fuelTank.amount",
+          "type": "u64",
+          "offset": 543
+        },
+        {
+          "name": "ammoBank.cargoId",
+          "type": "u16",
+          "offset": 551
+        },
+        {
+          "name": "ammoBank.amount",
+          "type": "u64",
+          "offset": 553
+        },
+        {
+          "name": "crewCount",
+          "type": "u16",
+          "offset": 561
+        },
+        {
+          "name": "rentedCrew",
+          "type": "u16",
+          "offset": 563
+        },
+        {
+          "name": "shipDefinitionsSeqId",
+          "type": "u32",
+          "offset": 565
+        },
+        {
+          "name": "ap",
+          "type": "u32",
+          "offset": 569
+        },
+        {
+          "name": "sp",
+          "type": "u32",
+          "offset": 573
+        },
+        {
+          "name": "hp",
+          "type": "u32",
+          "offset": 577
+        },
+        {
+          "name": "pendingHp",
+          "type": "u32",
+          "offset": 581
+        },
+        {
+          "name": "ammoUsage",
+          "type": "enum",
+          "offset": 585
+        },
+        {
+          "name": "apReloadExpiresAt",
+          "type": "i64",
+          "offset": 586
+        },
+        {
+          "name": "shieldBreakDelayExpiresAt",
+          "type": "i64",
+          "offset": 594
+        },
+        {
+          "name": "lastCombatUpdate",
+          "type": "i64",
+          "offset": 602
+        },
+        {
+          "name": "location",
+          "type": "[i64;2]",
+          "offset": 610
+        },
+        {
+          "name": "lastUpdateAt",
+          "type": "i64",
+          "offset": 626
+        },
+        {
+          "name": "fleetShips",
+          "type": "Map<shipId,u64>",
+          "offset": 634
+        }
+      ],
+      "createdBy": [
+        "create_fleet",
+        "admin_create_fleet"
+      ],
+      "mutatedBy": [
+        "warp_lane"
+      ],
+      "sample": "GijBX5Ry7kjWULuF4BfyLnWMsjScCf46LiDfQ8cWXQea"
+    },
+    {
+      "name": "Game",
+      "discriminator": "1b5aa67d4a647912",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "ammo",
+          "type": "u16",
+          "offset": 41
+        },
+        {
+          "name": "food",
+          "type": "u16",
+          "offset": 43
+        },
+        {
+          "name": "fuel",
+          "type": "u16",
+          "offset": 45
+        },
+        {
+          "name": "repairKit",
+          "type": "u16",
+          "offset": 47
+        },
+        {
+          "name": "currencies.atlas.mint",
+          "type": "Pubkey",
+          "offset": 49
+        },
+        {
+          "name": "currencies.atlas.vault",
+          "type": "Pubkey",
+          "offset": 81
+        },
+        {
+          "name": "currencies.atlas.daoVault",
+          "type": "Pubkey",
+          "offset": 113
+        },
+        {
+          "name": "currencies.atlas.withdrawEpochDuration",
+          "type": "u32",
+          "offset": 145
+        },
+        {
+          "name": "currencies.atlas.circuitBreaker",
+          "type": "u64",
+          "offset": 149
+        },
+        {
+          "name": "currencies.polis.mint",
+          "type": "Pubkey",
+          "offset": 157
+        },
+        {
+          "name": "currencies.polis.vault",
+          "type": "Pubkey",
+          "offset": 189
+        },
+        {
+          "name": "currencies.polis.daoVault",
+          "type": "Pubkey",
+          "offset": 221
+        },
+        {
+          "name": "currencies.polis.withdrawEpochDuration",
+          "type": "u32",
+          "offset": 253
+        },
+        {
+          "name": "currencies.polis.circuitBreaker",
+          "type": "u64",
+          "offset": 257
+        },
+        {
+          "name": "globalCeasefire",
+          "type": "bool",
+          "offset": 265
+        },
+        {
+          "name": "interactionRange",
+          "type": "i64",
+          "offset": 266
+        },
+        {
+          "name": "lootExclusivityTime",
+          "type": "i64",
+          "offset": 274
+        },
+        {
+          "name": "maxLootRate",
+          "type": "u32",
+          "offset": 282
+        },
+        {
+          "name": "starbaseUpgradeProgressContinuation",
+          "type": "u32",
+          "offset": 286
+        },
+        {
+          "name": "crewRespawnTime",
+          "type": "i64",
+          "offset": 290
+        },
+        {
+          "name": "cargoRespawnTime",
+          "type": "i64",
+          "offset": 298
+        },
+        {
+          "name": "rawShipsRespawnTime",
+          "type": "i64",
+          "offset": 306
+        },
+        {
+          "name": "combat.maxFleetSize",
+          "type": "u32",
+          "offset": 314
+        },
+        {
+          "name": "crewConfig",
+          "type": "Pubkey",
+          "offset": 318
+        },
+        {
+          "name": "shipDefinitions.seqId",
+          "type": "u32",
+          "offset": 350
+        },
+        {
+          "name": "shipDefinitions.maxFleetSize",
+          "type": "u32",
+          "offset": 354
+        },
+        {
+          "name": "shipDefinitions.mintToId.unsizedLen",
+          "type": "u32",
+          "offset": 358
+        },
+        {
+          "name": "shipDefinitions.mintToId.offsetList",
+          "type": "Vec<struct>",
+          "offset": 362
+        }
+      ],
+      "sample": "HKsvhEMmh7hBUHYZjMBc9c3NVVNGbpw2gZ8K7NRCMrCq",
+      "regions": [
+        {
+          "name": "header",
+          "offset": 0,
+          "end": 26248
+        },
+        {
+          "name": "shipConfigs",
+          "offset": 26248,
+          "end": 1523238,
+          "note": "61 'Default Config' names; stride ~22610 but not fixed (deltas 22499\u201323333). Names continue past old end 1405458 into former betweenShipAndItems (last Default Config fileoff 1494918).: between is ship-config overflow, not a new table. itemTable still starts 1523238."
+        },
+        {
+          "name": "betweenShipAndItems",
+          "offset": 1405458,
+          "end": 1523238,
+          "note": "Mostly trailing ship config variants (ASCII ' Config'). Merge into shipConfigs for reads. Keep slice for TOC.."
+        },
+        {
+          "name": "itemTable",
+          "offset": 1523238,
+          "end": 1981878,
+          "note": "LIVE dump: rec0 Ammunition mint 685bCa46\u2026, rec1 Food FDWYLLYM\u2026, rec2 Fuel Dz5L9SMK\u2026 3640\u00d7126 B. confirmed."
+        },
+        {
+          "name": "tail",
+          "offset": 2106766,
+          "end": 2764180,
+          "note": "After itemCategories. Still packed (Claim Stake Tier names at 2106856, 99 B apart). inferred."
+        },
+        {
+          "name": "itemCategories",
+          "offset": 2105776,
+          "end": 2106766,
+          "note": "LIVE dump: 15\u00d766 B records (64-byte ASCII name + u16). BASIC RESOURCE=3 \u2026 HABS=16, COMBAT_MEDALLIONS=0. After itemTable; was lumped into 'tail'."
+        }
+      ]
+    },
+    {
+      "name": "KingSystemTracker",
+      "discriminator": "6a7f2a971f7df6fe",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "systemCount",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "pad0",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "systemIds",
+          "type": "[systemId;69]",
+          "offset": 44
+        },
+        {
+          "name": "owners",
+          "type": "[minorFactionId;69]",
+          "offset": 182
+        },
+        {
+          "name": "majorCounts",
+          "type": "[u8;3]",
+          "offset": 320
+        },
+        {
+          "name": "configuredAt",
+          "type": "i64",
+          "offset": 323
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;32]",
+          "offset": 331
+        }
+      ]
+    },
+    {
+      "name": "LocalMarket",
+      "discriminator": "1cf2d61d5e73a799",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 41
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 49
+        },
+        {
+          "name": "marketInitializer",
+          "type": "Pubkey",
+          "offset": 50
+        },
+        {
+          "name": "cargoId",
+          "type": "u16",
+          "offset": 82
+        },
+        {
+          "name": "amount",
+          "type": "u64",
+          "offset": 84
+        },
+        {
+          "name": "vault",
+          "type": "u64",
+          "offset": 92
+        },
+        {
+          "name": "bids.idCounter",
+          "type": "u64",
+          "offset": 100
+        },
+        {
+          "name": "bids.makers",
+          "type": "Map<Pubkey,makerInfo>",
+          "offset": 108
+        }
+      ],
+      "sample": "Cx2gNp5ReMp7H1edQ6dAsHTQZh3YzWH1pwpDr9vseRtK"
+    },
+    {
+      "name": "Loot",
+      "discriminator": "97e1cfe473d2409f",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "coordinates",
+          "type": "[i64;2]",
+          "offset": 73
+        },
+        {
+          "name": "rewardStatus",
+          "type": "u8",
+          "offset": 89
+        },
+        {
+          "name": "rewardLegCount",
+          "type": "u8",
+          "offset": 90
+        },
+        {
+          "name": "rewardPad",
+          "type": "[u8;2]",
+          "offset": 91
+        },
+        {
+          "name": "rewardConfigVersion",
+          "type": "u32",
+          "offset": 93
+        },
+        {
+          "name": "rewardCommitSlot",
+          "type": "u64",
+          "offset": 97
+        },
+        {
+          "name": "rewardCommittedAt",
+          "type": "i64",
+          "offset": 105
+        },
+        {
+          "name": "rewardLegs",
+          "type": "[combatRewardLeg;2]",
+          "offset": 113
+        },
+        {
+          "name": "unsizedLen",
+          "type": "u32",
+          "offset": 209
+        },
+        {
+          "name": "offsetList",
+          "type": "Vec<u32>",
+          "offset": 213
+        }
+      ]
+    },
+    {
+      "name": "LoyaltyAtlasBank",
+      "discriminator": "efd62b6ccc390373",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 74
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;6]",
+          "offset": 76
+        },
+        {
+          "name": "claimableAtlas",
+          "type": "u64",
+          "offset": 82
+        },
+        {
+          "name": "lifetimeLp",
+          "type": "u128",
+          "offset": 90
+        },
+        {
+          "name": "lifetimeAtlas",
+          "type": "u128",
+          "offset": 106
+        },
+        {
+          "name": "lastCreditedAt",
+          "type": "i64",
+          "offset": 122
+        },
+        {
+          "name": "expiresAt",
+          "type": "i64",
+          "offset": 130
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;32]",
+          "offset": 138
+        }
+      ]
+    },
+    {
+      "name": "LoyaltyContribution",
+      "discriminator": "80c61e873a4394a2",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "settled",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "pad0",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 44
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 76
+        },
+        {
+          "name": "pad1",
+          "type": "[u8;6]",
+          "offset": 78
+        },
+        {
+          "name": "epochIndex",
+          "type": "u64",
+          "offset": 84
+        },
+        {
+          "name": "lp",
+          "type": "u128",
+          "offset": 92
+        },
+        {
+          "name": "atlasEntitlement",
+          "type": "u64",
+          "offset": 108
+        },
+        {
+          "name": "settledAt",
+          "type": "i64",
+          "offset": 116
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;24]",
+          "offset": 124
+        }
+      ],
+      "createdBy": [
+        "init_loyalty_contribution"
+      ],
+      "mutatedBy": [
+        "repair_starbase",
+        "settle_loyalty_contribution"
+      ]
+    },
+    {
+      "name": "LoyaltyEpoch",
+      "discriminator": "1150ee0bed05ab73",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 10
+        },
+        {
+          "name": "kingSystems",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 44
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;2]",
+          "offset": 46
+        },
+        {
+          "name": "configVersion",
+          "type": "u32",
+          "offset": 48
+        },
+        {
+          "name": "epochIndex",
+          "type": "u64",
+          "offset": 52
+        },
+        {
+          "name": "startsAt",
+          "type": "i64",
+          "offset": 60
+        },
+        {
+          "name": "endsAt",
+          "type": "i64",
+          "offset": 68
+        },
+        {
+          "name": "settlementDeadline",
+          "type": "i64",
+          "offset": 76
+        },
+        {
+          "name": "totalLp",
+          "type": "u128",
+          "offset": 84
+        },
+        {
+          "name": "poolAtlas",
+          "type": "u64",
+          "offset": 100
+        },
+        {
+          "name": "unsettledAtlas",
+          "type": "u64",
+          "offset": 108
+        },
+        {
+          "name": "settledAtlas",
+          "type": "u64",
+          "offset": 116
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;32]",
+          "offset": 124
+        }
+      ],
+      "createdBy": [
+        "init_loyalty_epoch"
+      ],
+      "mutatedBy": [
+        "init_loyalty_contribution",
+        "repair_starbase",
+        "settle_loyalty_contribution"
+      ]
+    },
+    {
+      "name": "Recipe",
+      "discriminator": "0aa29c6438c1cd4d",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "recipeId",
+          "type": "u16",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 11
+        },
+        {
+          "name": "craftingDuration",
+          "type": "u64",
+          "offset": 43
+        },
+        {
+          "name": "minDuration",
+          "type": "u64",
+          "offset": 51
+        },
+        {
+          "name": "name",
+          "type": "[u8;64]",
+          "offset": 59
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 123
+        },
+        {
+          "name": "feeAmount",
+          "type": "u64",
+          "offset": 124
+        },
+        {
+          "name": "feeRecipient",
+          "type": "enum",
+          "offset": 132
+        },
+        {
+          "name": "habRequired",
+          "type": "bool",
+          "offset": 133
+        },
+        {
+          "name": "usageCount",
+          "type": "u64",
+          "offset": 134
+        },
+        {
+          "name": "usageLimit",
+          "type": "u64",
+          "offset": 142
+        },
+        {
+          "name": "value",
+          "type": "u64",
+          "offset": 150
+        },
+        {
+          "name": "minStarbaseLevel",
+          "type": "enum",
+          "offset": 158
+        },
+        {
+          "name": "craftingEfficiencyMinmax.min",
+          "type": "u64",
+          "offset": 159
+        },
+        {
+          "name": "craftingEfficiencyMinmax.max",
+          "type": "u64",
+          "offset": 167
+        },
+        {
+          "name": "craftingSpeedMinmax.min",
+          "type": "u64",
+          "offset": 175
+        },
+        {
+          "name": "craftingSpeedMinmax.max",
+          "type": "u64",
+          "offset": 183
+        },
+        {
+          "name": "craftingCrewCountMinmax.min",
+          "type": "u64",
+          "offset": 191
+        },
+        {
+          "name": "craftingCrewCountMinmax.max",
+          "type": "u64",
+          "offset": 199
+        },
+        {
+          "name": "craftingFeeMinmax.min",
+          "type": "u64",
+          "offset": 207
+        },
+        {
+          "name": "craftingFeeMinmax.max",
+          "type": "u64",
+          "offset": 215
+        },
+        {
+          "name": "researchRequirements",
+          "type": "setTypeNode",
+          "offset": 223
+        }
+      ]
+    },
+    {
+      "name": "RegionTracker",
+      "discriminator": "171d1bdf479800e1",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "gridK",
+          "type": "u8",
+          "offset": 41
+        },
+        {
+          "name": "unsizedLen",
+          "type": "u32",
+          "offset": 42
+        },
+        {
+          "name": "offsetList",
+          "type": "Vec<struct>",
+          "offset": 46
+        }
+      ]
+    },
+    {
+      "name": "ScanPattern",
+      "discriminator": "35d3611e7be52e37",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "scanPatternId",
+          "type": "u16",
+          "offset": 10
+        },
+        {
+          "name": "name",
+          "type": "[u8;64]",
+          "offset": 12
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 76
+        },
+        {
+          "name": "cooldownMultiplier",
+          "type": "u32",
+          "offset": 108
+        },
+        {
+          "name": "blankWeight",
+          "type": "u32",
+          "offset": 112
+        },
+        {
+          "name": "blankXpValue",
+          "type": "u32",
+          "offset": 116
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 120
+        },
+        {
+          "name": "cost",
+          "type": "Vec<scanCost>",
+          "offset": 121
+        }
+      ]
+    },
+    {
+      "name": "StarSystem",
+      "discriminator": "cf207b0909fbdda9",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "systemId",
+          "type": "u16",
+          "offset": 41
+        },
+        {
+          "name": "name",
+          "type": "[u8;64]",
+          "offset": 43
+        },
+        {
+          "name": "region",
+          "type": "Option<regionId>",
+          "offset": 107
+        },
+        {
+          "name": "coordinates",
+          "type": "[i64;2]",
+          "offset": 110
+        },
+        {
+          "name": "seqId",
+          "type": "u64",
+          "offset": 126
+        },
+        {
+          "name": "connections",
+          "type": "Map<systemId,connectionCost>",
+          "offset": 134
+        }
+      ]
+    },
+    {
+      "name": "StarbasePlayer",
+      "discriminator": "c0ea905648130563",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "playerProfile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "faction",
+          "type": "faction",
+          "offset": 41
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "character",
+          "type": "Pubkey",
+          "offset": 74
+        },
+        {
+          "name": "totalCrew",
+          "type": "u32",
+          "offset": 106
+        },
+        {
+          "name": "busyCrew",
+          "type": "u32",
+          "offset": 110
+        },
+        {
+          "name": "quantity",
+          "type": "u64",
+          "offset": 114
+        },
+        {
+          "name": "completeAt",
+          "type": "i64",
+          "offset": 122
+        },
+        {
+          "name": "seqId",
+          "type": "u64",
+          "offset": 130
+        },
+        {
+          "name": "cargoRespawnEndsAt",
+          "type": "i64",
+          "offset": 138
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 146
+        },
+        {
+          "name": "respawningShips",
+          "type": "Map<shipId,respawnQueue>",
+          "offset": 147
+        }
+      ],
+      "createdBy": [
+        "register_starbase_player"
+      ],
+      "mutatedBy": [
+        "unload_fleet_crew",
+        "contribute_to_starbase_upgrade",
+        "install_starbase_upgrade_resource"
+      ],
+      "sample": "J7KeHnWUftsRWK2QB6npg9Bt7wY7po4H41qVPwh6hVhE"
+    },
+    {
+      "name": "StarbaseUpgradeProcess",
+      "discriminator": "f3894ceb09f2af86",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "starbasePlayer",
+          "type": "Pubkey",
+          "offset": 73
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 105
+        },
+        {
+          "name": "resourceId",
+          "type": "u16",
+          "offset": 113
+        },
+        {
+          "name": "quantity",
+          "type": "u64",
+          "offset": 115
+        },
+        {
+          "name": "numCrew",
+          "type": "u16",
+          "offset": 123
+        },
+        {
+          "name": "startTime",
+          "type": "i64",
+          "offset": 125
+        },
+        {
+          "name": "endTime",
+          "type": "i64",
+          "offset": 133
+        }
+      ],
+      "sample": "jyjdNtTxycdETscETQr4vBERD8cuBMvq8nGMrJHxCXR"
+    },
+    {
+      "name": "FleetCrewBinding",
+      "discriminator": "cb4095256fccb8b5",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;6]",
+          "offset": 10
+        },
+        {
+          "name": "fleet",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "ownerProfile",
+          "type": "Pubkey",
+          "offset": 48
+        },
+        {
+          "name": "summary.version",
+          "type": "u8",
+          "offset": 80
+        },
+        {
+          "name": "pageIndex",
+          "type": "u16",
+          "offset": 81
+        },
+        {
+          "name": "pageCount",
+          "type": "u16",
+          "offset": 83
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;3]",
+          "offset": 85
+        },
+        {
+          "name": "countByAssignment",
+          "type": "[u32;5]",
+          "offset": 88
+        },
+        {
+          "name": "rentedCount",
+          "type": "u32",
+          "offset": 108
+        },
+        {
+          "name": "normalizedCrewTotal",
+          "type": "u32",
+          "offset": 112
+        },
+        {
+          "name": "recordCount",
+          "type": "u32",
+          "offset": 116
+        },
+        {
+          "name": "sumApt",
+          "type": "[u64;9]",
+          "offset": 120
+        },
+        {
+          "name": "sumWeights",
+          "type": "u64",
+          "offset": 192
+        },
+        {
+          "name": "rarityWeightSum",
+          "type": "u64",
+          "offset": 200
+        },
+        {
+          "name": "perkUncond",
+          "type": "[i16;13]",
+          "offset": 208
+        },
+        {
+          "name": "perkCond",
+          "type": "[condPerkEntry;8]",
+          "offset": 234
+        },
+        {
+          "name": "nonneutralSlotMask",
+          "type": "u16",
+          "offset": 298
+        },
+        {
+          "name": "gearScalar",
+          "type": "[i16;13]",
+          "offset": 300
+        },
+        {
+          "name": "commandConcurrency",
+          "type": "i16",
+          "offset": 326
+        },
+        {
+          "name": "commandCrewcount",
+          "type": "i16",
+          "offset": 328
+        },
+        {
+          "name": "xpAccumulator",
+          "type": "u64",
+          "offset": 330
+        },
+        {
+          "name": "lastXpTick",
+          "type": "i64",
+          "offset": 338
+        },
+        {
+          "name": "summary.reserved",
+          "type": "[u8;8]",
+          "offset": 346
+        },
+        {
+          "name": "xpAccumulatorByCategory",
+          "type": "[u64;5]",
+          "offset": 354
+        },
+        {
+          "name": "maxRarity",
+          "type": "u8",
+          "offset": 394
+        },
+        {
+          "name": "lastActionEpoch",
+          "type": "u64",
+          "offset": 395
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "QuestProcess",
+      "discriminator": "cc50602ee9b3a12f",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "starbasePlayer",
+          "type": "Pubkey",
+          "offset": 41
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 73
+        },
+        {
+          "name": "numCrew",
+          "type": "u16",
+          "offset": 81
+        },
+        {
+          "name": "rewardXp",
+          "type": "u8",
+          "offset": 83
+        },
+        {
+          "name": "rewardPage",
+          "type": "u16",
+          "offset": 84
+        },
+        {
+          "name": "pad",
+          "type": "[u8;3]",
+          "offset": 86
+        },
+        {
+          "name": "startTime",
+          "type": "i64",
+          "offset": 89
+        },
+        {
+          "name": "endTime",
+          "type": "i64",
+          "offset": 97
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "CrewRoster",
+      "discriminator": "37c62b04691cf15a",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "pageIndex",
+          "type": "u16",
+          "offset": 9
+        },
+        {
+          "name": "pageCount",
+          "type": "u16",
+          "offset": 11
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;3]",
+          "offset": 13
+        },
+        {
+          "name": "countByAssignment",
+          "type": "[u32;5]",
+          "offset": 16
+        },
+        {
+          "name": "rentedCount",
+          "type": "u32",
+          "offset": 36
+        },
+        {
+          "name": "normalizedCrewTotal",
+          "type": "u32",
+          "offset": 40
+        },
+        {
+          "name": "recordCount",
+          "type": "u32",
+          "offset": 44
+        },
+        {
+          "name": "sumApt",
+          "type": "[u64;9]",
+          "offset": 48
+        },
+        {
+          "name": "sumWeights",
+          "type": "u64",
+          "offset": 120
+        },
+        {
+          "name": "rarityWeightSum",
+          "type": "u64",
+          "offset": 128
+        },
+        {
+          "name": "perkUncond",
+          "type": "[i16;13]",
+          "offset": 136
+        },
+        {
+          "name": "perkCond",
+          "type": "[condPerkEntry;8]",
+          "offset": 162
+        },
+        {
+          "name": "nonneutralSlotMask",
+          "type": "u16",
+          "offset": 226
+        },
+        {
+          "name": "gearScalar",
+          "type": "[i16;13]",
+          "offset": 228
+        },
+        {
+          "name": "commandConcurrency",
+          "type": "i16",
+          "offset": 254
+        },
+        {
+          "name": "commandCrewcount",
+          "type": "i16",
+          "offset": 256
+        },
+        {
+          "name": "xpAccumulator",
+          "type": "u64",
+          "offset": 258
+        },
+        {
+          "name": "lastXpTick",
+          "type": "i64",
+          "offset": 266
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;8]",
+          "offset": 274
+        },
+        {
+          "name": "xpAccumulatorByCategory",
+          "type": "[u64;5]",
+          "offset": 282
+        },
+        {
+          "name": "maxRarity",
+          "type": "u8",
+          "offset": 322
+        },
+        {
+          "name": "crew",
+          "type": "Vec<crewRecord>",
+          "offset": 323
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      },
+      "walkerReady": true
+    },
+    {
+      "name": "EncounterCommit",
+      "discriminator": "f16e321b932300da",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "character",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "fleet",
+          "type": "Pubkey",
+          "offset": 74
+        },
+        {
+          "name": "commitSlot",
+          "type": "u64",
+          "offset": 106
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 114
+        },
+        {
+          "name": "status",
+          "type": "u8",
+          "offset": 116
+        },
+        {
+          "name": "location",
+          "type": "[i64;2]",
+          "offset": 117
+        },
+        {
+          "name": "minorFaction",
+          "type": "u16",
+          "offset": 133
+        },
+        {
+          "name": "reserved",
+          "type": "Vec<u8>",
+          "offset": 135
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "EncounterPool",
+      "discriminator": "215ec061ef8ef371",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "minorFaction",
+          "type": "u16",
+          "offset": 44
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 46
+        },
+        {
+          "name": "triggerWeight",
+          "type": "u32",
+          "offset": 47
+        },
+        {
+          "name": "triggerTotal",
+          "type": "u32",
+          "offset": 51
+        },
+        {
+          "name": "marketTtlSecs",
+          "type": "u32",
+          "offset": 55
+        },
+        {
+          "name": "atlasBurnBps",
+          "type": "u16",
+          "offset": 59
+        },
+        {
+          "name": "faucetEnabled",
+          "type": "u8",
+          "offset": 61
+        },
+        {
+          "name": "rotationEnabled",
+          "type": "u8",
+          "offset": 62
+        },
+        {
+          "name": "rotationPeriodSecs",
+          "type": "u32",
+          "offset": 63
+        },
+        {
+          "name": "offers",
+          "type": "Vec<poolOfferEntry>",
+          "offset": 67
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "EncounterTreasury",
+      "discriminator": "51a1c539e3a992c2",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "minorFaction",
+          "type": "u16",
+          "offset": 44
+        },
+        {
+          "name": "vault",
+          "type": "u64",
+          "offset": 46
+        },
+        {
+          "name": "epochStart",
+          "type": "i64",
+          "offset": 54
+        },
+        {
+          "name": "epochLenSecs",
+          "type": "i64",
+          "offset": 62
+        },
+        {
+          "name": "atlasOutThisEpoch",
+          "type": "u64",
+          "offset": 70
+        },
+        {
+          "name": "atlasOutCapPerEpoch",
+          "type": "u64",
+          "offset": 78
+        },
+        {
+          "name": "reserves",
+          "type": "Map<cargoId,u64>",
+          "offset": 86
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "EphemeralMarket",
+      "discriminator": "bba828535a25d9c1",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "ownerCharacter",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 74
+        },
+        {
+          "name": "minorFaction",
+          "type": "u16",
+          "offset": 76
+        },
+        {
+          "name": "pool",
+          "type": "Pubkey",
+          "offset": 78
+        },
+        {
+          "name": "treasury",
+          "type": "Pubkey",
+          "offset": 110
+        },
+        {
+          "name": "funder",
+          "type": "Pubkey",
+          "offset": 142
+        },
+        {
+          "name": "atlasBurnBps",
+          "type": "u16",
+          "offset": 174
+        },
+        {
+          "name": "expiresAt",
+          "type": "i64",
+          "offset": 176
+        },
+        {
+          "name": "location",
+          "type": "[i64;2]",
+          "offset": 184
+        },
+        {
+          "name": "offers",
+          "type": "Vec<liveOffer>",
+          "offset": 200
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      },
+      "walkerReady": true
+    },
+    {
+      "name": "FactionConfig",
+      "discriminator": "340cfea68f357c37",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "decayPerDay",
+          "type": "u16",
+          "offset": 10
+        },
+        {
+          "name": "dailyCap",
+          "type": "u32",
+          "offset": 12
+        },
+        {
+          "name": "standingBps",
+          "type": "u32",
+          "offset": 16
+        },
+        {
+          "name": "drHalfLife",
+          "type": "u64",
+          "offset": 20
+        },
+        {
+          "name": "drScale",
+          "type": "u64",
+          "offset": 28
+        },
+        {
+          "name": "standingEpochCap",
+          "type": "u32",
+          "offset": 36
+        },
+        {
+          "name": "standingEpochLenSecs",
+          "type": "i64",
+          "offset": 40
+        },
+        {
+          "name": "dockMinBand",
+          "type": "u8",
+          "offset": 48
+        },
+        {
+          "name": "territoryYieldPerTick",
+          "type": "u16",
+          "offset": 49
+        },
+        {
+          "name": "territoryYieldTickSecs",
+          "type": "u32",
+          "offset": 51
+        },
+        {
+          "name": "pad",
+          "type": "[u8;1]",
+          "offset": 55
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "FactionEpochMeter",
+      "discriminator": "5c67f8a530f65320",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;4]",
+          "offset": 10
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 14
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 46
+        },
+        {
+          "name": "currentEpoch",
+          "type": "i64",
+          "offset": 48
+        },
+        {
+          "name": "standingOutThisEpoch",
+          "type": "u64",
+          "offset": 56
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "FactionMarket",
+      "discriminator": "a1462e693939ee02",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "system",
+          "type": "Pubkey",
+          "offset": 44
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 76
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "offset": 84
+        },
+        {
+          "name": "minStandingBuy",
+          "type": "i16",
+          "offset": 85
+        },
+        {
+          "name": "minStandingSell",
+          "type": "i16",
+          "offset": 87
+        },
+        {
+          "name": "priceTierBps",
+          "type": "[u16;4]",
+          "offset": 89
+        },
+        {
+          "name": "authoredTargetQty",
+          "type": "u64",
+          "offset": 97
+        },
+        {
+          "name": "restockPeriodSecs",
+          "type": "u32",
+          "offset": 105
+        },
+        {
+          "name": "lastRestockAt",
+          "type": "i64",
+          "offset": 109
+        },
+        {
+          "name": "atlasBurnBps",
+          "type": "u16",
+          "offset": 117
+        },
+        {
+          "name": "standingBps",
+          "type": "u32",
+          "offset": 119
+        },
+        {
+          "name": "faucetEnabled",
+          "type": "u8",
+          "offset": 123
+        },
+        {
+          "name": "pad",
+          "type": "[u8;4]",
+          "offset": 124
+        },
+        {
+          "name": "offers",
+          "type": "Vec<liveOffer>",
+          "offset": 128
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "FactionStanding",
+      "discriminator": "514fa2e1b7a57785",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "flags",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "bandFloor",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "standing",
+          "type": "i32",
+          "offset": 12
+        },
+        {
+          "name": "lifetimeEarned",
+          "type": "u64",
+          "offset": 16
+        },
+        {
+          "name": "accrualToday",
+          "type": "u32",
+          "offset": 24
+        },
+        {
+          "name": "dayAnchorTs",
+          "type": "i64",
+          "offset": 28
+        },
+        {
+          "name": "lastUpdateTs",
+          "type": "i64",
+          "offset": 36
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 44
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 76
+        },
+        {
+          "name": "factionId",
+          "type": "u16",
+          "offset": 108
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;6]",
+          "offset": 110
+        },
+        {
+          "name": "bandFloorReachedTs",
+          "type": "i64",
+          "offset": 116
+        },
+        {
+          "name": "storylineExpiryTs",
+          "type": "i64",
+          "offset": 124
+        },
+        {
+          "name": "reserved",
+          "type": "[u8;8]",
+          "offset": 132
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "ShipDefinitionUpload",
+      "discriminator": "8cb9800ce4d090b0",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "shipId",
+          "type": "u16",
+          "offset": 41
+        },
+        {
+          "name": "mode",
+          "type": "enum",
+          "offset": 43
+        },
+        {
+          "name": "id",
+          "type": "u16",
+          "offset": 44
+        },
+        {
+          "name": "name",
+          "type": "[u8;64]",
+          "offset": 46
+        },
+        {
+          "name": "mint",
+          "type": "Pubkey",
+          "offset": 110
+        },
+        {
+          "name": "sizeClass",
+          "type": "enum",
+          "offset": 142
+        },
+        {
+          "name": "subwarpSpeed",
+          "type": "u32",
+          "offset": 143
+        },
+        {
+          "name": "warpSpeed",
+          "type": "u32",
+          "offset": 147
+        },
+        {
+          "name": "warpLaneSpeed",
+          "type": "u32",
+          "offset": 151
+        },
+        {
+          "name": "maxWarpDistance",
+          "type": "u16",
+          "offset": 155
+        },
+        {
+          "name": "warpCoolDown",
+          "type": "u16",
+          "offset": 157
+        },
+        {
+          "name": "subwarpFuelConsumptionRate",
+          "type": "u32",
+          "offset": 159
+        },
+        {
+          "name": "warpFuelConsumptionRate",
+          "type": "u32",
+          "offset": 163
+        },
+        {
+          "name": "planetExitFuelAmount",
+          "type": "u32",
+          "offset": 167
+        },
+        {
+          "name": "warpXpRate",
+          "type": "u32",
+          "offset": 171
+        },
+        {
+          "name": "subwarpXpRate",
+          "type": "u32",
+          "offset": 175
+        },
+        {
+          "name": "cargoCapacity",
+          "type": "u64",
+          "offset": 179
+        },
+        {
+          "name": "fuelCapacity",
+          "type": "u64",
+          "offset": 187
+        },
+        {
+          "name": "ammoCapacity",
+          "type": "u64",
+          "offset": 195
+        },
+        {
+          "name": "ship.stats.cargoStats.ammoConsumptionRate",
+          "type": "u32",
+          "offset": 203
+        },
+        {
+          "name": "foodConsumptionRate",
+          "type": "u32",
+          "offset": 207
+        },
+        {
+          "name": "miningRate",
+          "type": "u32",
+          "offset": 211
+        },
+        {
+          "name": "loadRate",
+          "type": "u32",
+          "offset": 215
+        },
+        {
+          "name": "ap",
+          "type": "u32",
+          "offset": 219
+        },
+        {
+          "name": "hp",
+          "type": "u32",
+          "offset": 223
+        },
+        {
+          "name": "sp",
+          "type": "u32",
+          "offset": 227
+        },
+        {
+          "name": "ship.stats.combatStats.ammoConsumptionRate",
+          "type": "u32",
+          "offset": 231
+        },
+        {
+          "name": "apRegenRate",
+          "type": "u32",
+          "offset": 235
+        },
+        {
+          "name": "shieldRechargeRate",
+          "type": "u32",
+          "offset": 239
+        },
+        {
+          "name": "repairRate",
+          "type": "u32",
+          "offset": 243
+        },
+        {
+          "name": "repairAbility",
+          "type": "u32",
+          "offset": 247
+        },
+        {
+          "name": "repairEfficiency",
+          "type": "u32",
+          "offset": 251
+        },
+        {
+          "name": "repairCost",
+          "type": "u32",
+          "offset": 255
+        },
+        {
+          "name": "lootRate",
+          "type": "u32",
+          "offset": 259
+        },
+        {
+          "name": "shieldBreakDelay",
+          "type": "u16",
+          "offset": 263
+        },
+        {
+          "name": "warpSpoolTime",
+          "type": "u16",
+          "offset": 265
+        },
+        {
+          "name": "damageKinetic",
+          "type": "u32",
+          "offset": 267
+        },
+        {
+          "name": "damageKineticVariance",
+          "type": "u32",
+          "offset": 271
+        },
+        {
+          "name": "damageEnergy",
+          "type": "u32",
+          "offset": 275
+        },
+        {
+          "name": "damageEnergyVariance",
+          "type": "u32",
+          "offset": 279
+        },
+        {
+          "name": "damageEmp",
+          "type": "u32",
+          "offset": 283
+        },
+        {
+          "name": "damageEmpVariance",
+          "type": "u32",
+          "offset": 287
+        },
+        {
+          "name": "damageSuperchill",
+          "type": "u32",
+          "offset": 291
+        },
+        {
+          "name": "damageSuperchillVariance",
+          "type": "u32",
+          "offset": 295
+        },
+        {
+          "name": "damageShockwave",
+          "type": "u32",
+          "offset": 299
+        },
+        {
+          "name": "damageShockwaveVariance",
+          "type": "u32",
+          "offset": 303
+        },
+        {
+          "name": "damageGraygoo",
+          "type": "u32",
+          "offset": 307
+        },
+        {
+          "name": "damageGraygooVariance",
+          "type": "u32",
+          "offset": 311
+        },
+        {
+          "name": "damageHeat",
+          "type": "u32",
+          "offset": 315
+        },
+        {
+          "name": "damageHeatVariance",
+          "type": "u32",
+          "offset": 319
+        },
+        {
+          "name": "damageBomb",
+          "type": "u32",
+          "offset": 323
+        },
+        {
+          "name": "damageBombVariance",
+          "type": "u32",
+          "offset": 327
+        },
+        {
+          "name": "counterDecoy",
+          "type": "u32",
+          "offset": 331
+        },
+        {
+          "name": "counterEnergyCapacitor",
+          "type": "u32",
+          "offset": 335
+        },
+        {
+          "name": "counterFireSuppressor",
+          "type": "u32",
+          "offset": 339
+        },
+        {
+          "name": "counterFlare",
+          "type": "u32",
+          "offset": 343
+        },
+        {
+          "name": "counterHealingNanobots",
+          "type": "u32",
+          "offset": 347
+        },
+        {
+          "name": "counterMine",
+          "type": "u32",
+          "offset": 351
+        },
+        {
+          "name": "counterNegativeRemPlating",
+          "type": "u32",
+          "offset": 355
+        },
+        {
+          "name": "counterWarmingPlates",
+          "type": "u32",
+          "offset": 359
+        },
+        {
+          "name": "counterFaradayShielding",
+          "type": "u32",
+          "offset": 363
+        },
+        {
+          "name": "stealthPower",
+          "type": "u32",
+          "offset": 367
+        },
+        {
+          "name": "hitChance",
+          "type": "u32",
+          "offset": 371
+        },
+        {
+          "name": "aimAbility",
+          "type": "u32",
+          "offset": 375
+        },
+        {
+          "name": "critChance",
+          "type": "u32",
+          "offset": 379
+        },
+        {
+          "name": "critMultiplier",
+          "type": "u32",
+          "offset": 383
+        },
+        {
+          "name": "fuelConsumptionRate",
+          "type": "u32",
+          "offset": 387
+        },
+        {
+          "name": "missileDamage",
+          "type": "u32",
+          "offset": 391
+        },
+        {
+          "name": "missileFireRate",
+          "type": "u32",
+          "offset": 395
+        },
+        {
+          "name": "requiredCrew",
+          "type": "u16",
+          "offset": 399
+        },
+        {
+          "name": "passengerCapacity",
+          "type": "u16",
+          "offset": 401
+        },
+        {
+          "name": "respawnTimeWithoutFee",
+          "type": "u16",
+          "offset": 403
+        },
+        {
+          "name": "respawnTimeWithFee",
+          "type": "u16",
+          "offset": 405
+        },
+        {
+          "name": "respawnFee",
+          "type": "u64",
+          "offset": 407
+        },
+        {
+          "name": "scanCoolDown",
+          "type": "u32",
+          "offset": 415
+        },
+        {
+          "name": "scanPower",
+          "type": "u32",
+          "offset": 419
+        },
+        {
+          "name": "scanCost",
+          "type": "u32",
+          "offset": 423
+        },
+        {
+          "name": "scanBonus",
+          "type": "i32",
+          "offset": 427
+        },
+        {
+          "name": "lpValue",
+          "type": "u32",
+          "offset": 431
+        },
+        {
+          "name": "medallionValue",
+          "type": "u32",
+          "offset": 435
+        },
+        {
+          "name": "xpValue",
+          "type": "u32",
+          "offset": 439
+        },
+        {
+          "name": "expectedResearchLen",
+          "type": "u16",
+          "offset": 443
+        },
+        {
+          "name": "expectedComponentLen",
+          "type": "u16",
+          "offset": 445
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 447
+        },
+        {
+          "name": "researchRequirements",
+          "type": "Vec<researchTag>",
+          "offset": 448
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "MissionProcess",
+      "discriminator": "512653ba6b23a189",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "status",
+          "type": "u8",
+          "offset": 10
+        },
+        {
+          "name": "outcomePad",
+          "type": "u8",
+          "offset": 11
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 12
+        },
+        {
+          "name": "starbasePlayer",
+          "type": "Pubkey",
+          "offset": 44
+        },
+        {
+          "name": "starbaseSeqId",
+          "type": "u64",
+          "offset": 76
+        },
+        {
+          "name": "missionTemplateId",
+          "type": "u32",
+          "offset": 84
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 88
+        },
+        {
+          "name": "numCrew",
+          "type": "u16",
+          "offset": 90
+        },
+        {
+          "name": "rewardPage",
+          "type": "u16",
+          "offset": 92
+        },
+        {
+          "name": "rewardXp",
+          "type": "u16",
+          "offset": 94
+        },
+        {
+          "name": "successBps",
+          "type": "u16",
+          "offset": 96
+        },
+        {
+          "name": "commitSlot",
+          "type": "u64",
+          "offset": 98
+        },
+        {
+          "name": "stakeAtlas",
+          "type": "u64",
+          "offset": 106
+        },
+        {
+          "name": "stakeResourceId",
+          "type": "u16",
+          "offset": 114
+        },
+        {
+          "name": "stakeResourceQty",
+          "type": "u64",
+          "offset": 116
+        },
+        {
+          "name": "rewardPool",
+          "type": "Pubkey",
+          "offset": 124
+        },
+        {
+          "name": "rewardAtlas",
+          "type": "u64",
+          "offset": 156
+        },
+        {
+          "name": "lootTableId",
+          "type": "u32",
+          "offset": 164
+        },
+        {
+          "name": "startTime",
+          "type": "i64",
+          "offset": 168
+        },
+        {
+          "name": "endTime",
+          "type": "i64",
+          "offset": 176
+        },
+        {
+          "name": "rollValue",
+          "type": "u16",
+          "offset": 184
+        },
+        {
+          "name": "sectorWinDelta",
+          "type": "i16",
+          "offset": 186
+        },
+        {
+          "name": "sectorLossDelta",
+          "type": "i16",
+          "offset": 188
+        },
+        {
+          "name": "stanceSide",
+          "type": "u8",
+          "offset": 190
+        },
+        {
+          "name": "baseFaction",
+          "type": "u8",
+          "offset": 191
+        },
+        {
+          "name": "sectorIncumbent",
+          "type": "u8",
+          "offset": 192
+        },
+        {
+          "name": "pinnedOutlaw",
+          "type": "u8",
+          "offset": 193
+        },
+        {
+          "name": "pad",
+          "type": "[u8;2]",
+          "offset": 194
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "MissionStakeVault",
+      "discriminator": "56278266b69812fb",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "mission",
+          "type": "Pubkey",
+          "offset": 42
+        },
+        {
+          "name": "vault",
+          "type": "u64",
+          "offset": 74
+        },
+        {
+          "name": "reserves",
+          "type": "Map<cargoId,u64>",
+          "offset": 82
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      },
+      "walkerReady": true
+    },
+    {
+      "name": "MissionTreasury",
+      "discriminator": "e6748a6b4d5b4d78",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 10
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 42
+        },
+        {
+          "name": "vault",
+          "type": "u64",
+          "offset": 44
+        },
+        {
+          "name": "epochStart",
+          "type": "i64",
+          "offset": 52
+        },
+        {
+          "name": "epochLenSecs",
+          "type": "i64",
+          "offset": 60
+        },
+        {
+          "name": "atlasOutThisEpoch",
+          "type": "u64",
+          "offset": 68
+        },
+        {
+          "name": "atlasOutCapPerEpoch",
+          "type": "u64",
+          "offset": 76
+        },
+        {
+          "name": "reserves",
+          "type": "Map<cargoId,u64>",
+          "offset": 84
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "OutlawFlag",
+      "discriminator": "1368a01762dafdad",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "faction",
+          "type": "u8",
+          "offset": 41
+        },
+        {
+          "name": "outlaw",
+          "type": "u8",
+          "offset": 42
+        },
+        {
+          "name": "declaredAt",
+          "type": "i64",
+          "offset": 43
+        },
+        {
+          "name": "pvpUntil",
+          "type": "i64",
+          "offset": 51
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 59
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "RegionOrderAnchor",
+      "discriminator": "b334788942095b3e",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 9
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 10
+        },
+        {
+          "name": "pad0",
+          "type": "[u8;4]",
+          "offset": 12
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 16
+        },
+        {
+          "name": "orderImpactAcc",
+          "type": "i128",
+          "offset": 48
+        },
+        {
+          "name": "settleSeq",
+          "type": "u64",
+          "offset": 64
+        },
+        {
+          "name": "lastSettleTs",
+          "type": "i64",
+          "offset": 72
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "RegionBorderUpload",
+      "discriminator": "64dbebfd39c96acd",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "regionId",
+          "type": "u16",
+          "offset": 41
+        },
+        {
+          "name": "expectedLen",
+          "type": "u8",
+          "offset": 43
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 44
+        },
+        {
+          "name": "border",
+          "type": "Vec<[i64;2]>",
+          "offset": 45
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    },
+    {
+      "name": "ScanPatternNoiseMapUpload",
+      "discriminator": "72db1e1e72d03a46",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "gameId",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "scanPatternId",
+          "type": "u16",
+          "offset": 41
+        },
+        {
+          "name": "expectedLen",
+          "type": "u16",
+          "offset": 43
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 45
+        },
+        {
+          "name": "noiseMaps",
+          "type": "Vec<scanNoiseMap>",
+          "offset": 46
+        }
+      ],
+      "size": {
+        "kind": "unknown"
+      }
+    }
+  ]
+}

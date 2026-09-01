@@ -1,0 +1,126 @@
+{
+  "verifiedAt": "2026-08-27T09:45:00Z",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "gameAccount": "EKEj47SzaCjPM3m4T4vRXrrsVtkEmiNgPMMFye3AkXj4",
+  "uiWorld": "c4-sage-primary",
+  "framework": "star-frame",
+  "programs": [
+    {
+      "id": "c4-sage-primary",
+      "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+      "role": "sage-game",
+      "uiWorld": true,
+      "deploySlot": 47030309,
+      "instructionCounts": {
+        "total": 242,
+        "player": 222,
+        "admin": 20,
+        "unknown": 0
+      }
+    },
+    {
+      "id": "c4-sage-secondary",
+      "programId": "HYEWZXXzMyrnN89ASYPVHHdFdgvrgV8diFLv6P2wEwFN",
+      "role": "sage-game",
+      "uiWorld": false,
+      "deploySlot": 47028983,
+      "instructionCounts": {
+        "total": 242,
+        "player": 222,
+        "admin": 20,
+        "unknown": 0
+      }
+    },
+    {
+      "id": "c4-sage-dormant",
+      "programId": "AAzpHLgN3L9MTThzjoM6QCLBBuHALnHwq9G1N84QTvxM",
+      "role": "sage-game",
+      "uiWorld": false,
+      "deploySlot": 38889084,
+      "instructionCounts": {
+        "total": 266,
+        "player": 220,
+        "admin": 19,
+        "unknown": 27
+      }
+    },
+    {
+      "id": "c4-profile",
+      "programId": "C4PRoFNroxxzdgeCoM31LJjYRg7kT6ymogSTAT99iD1u",
+      "role": "identity",
+      "uiWorld": false,
+      "deploySlot": 27180239,
+      "instructionCounts": {
+        "total": 23,
+        "player": 18,
+        "admin": 1,
+        "unknown": 4
+      }
+    },
+    {
+      "id": "c4-profile-faction",
+      "programId": "C4FACQA1PpNRKrjQ2862ABNR42DTz7EzGj1uhTNFASwP",
+      "role": "enlistment",
+      "uiWorld": false,
+      "deploySlot": 27180207,
+      "instructionCounts": {
+        "total": 1,
+        "player": 1,
+        "admin": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "id": "zink-subscription",
+      "programId": "PSubAEkp16MhpP7AfB5kBbpWQ4cppUj9nxS5vUkHT13",
+      "role": "payments",
+      "uiWorld": false,
+      "deploySlot": 8299741,
+      "instructionCounts": {
+        "total": 5,
+        "player": 5,
+        "admin": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "id": "zink-bridge-testnet",
+      "programId": "BSMryvZi4HYn6ASXrY3xcDwo1sG6pXigaakQMgPMv6gT",
+      "role": "bridge",
+      "uiWorld": false,
+      "deploySlot": 15671208,
+      "instructionCounts": {
+        "total": 10,
+        "player": 5,
+        "admin": 1,
+        "unknown": 4
+      }
+    },
+    {
+      "id": "zink-bridge-mainnet",
+      "programId": "BR1DGEaF3Z3ZN9UouYiRLKbK2WWgFmHwUwcZKJfmJSSP",
+      "role": "bridge",
+      "uiWorld": false,
+      "instructionCounts": {
+        "total": 0,
+        "player": 0,
+        "admin": 0,
+        "unknown": 0
+      }
+    },
+    {
+      "id": "inkchat",
+      "programId": "8BGyBLWpPcJQ5yw4aupJToBvushHWHcYrk9rWBYJh3ui",
+      "role": "chat",
+      "uiWorld": false,
+      "deploySlot": 44613629,
+      "instructionCounts": {
+        "total": 33,
+        "player": 29,
+        "admin": 4,
+        "unknown": 0
+      }
+    }
+  ]
+}

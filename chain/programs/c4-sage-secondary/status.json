@@ -1,0 +1,21 @@
+{
+  "name": "c4-sage-secondary",
+  "programId": "HYEWZXXzMyrnN89ASYPVHHdFdgvrgV8diFLv6P2wEwFN",
+  "role": "sage-game",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "gameAccount": "6CmQVDWZeT4Vq6LHuCzdi68j9Dh6Sq3ua3WCrspg55G",
+  "programData": "9EDBJnF9urnaWwBxQrmBsxuGW6CPpQ3uKY5d6h6xrxM9",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 47028983,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "discsetIdenticalTo": "c4-sage-primary",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 242,
+    "player": 222,
+    "admin": 20,
+    "unknown": 0
+  }
+}

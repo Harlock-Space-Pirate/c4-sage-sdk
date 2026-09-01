@@ -1,0 +1,569 @@
+{
+  "programId": "C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF",
+  "errors": [
+    {
+      "name": "programMismatch",
+      "code": 1367932928,
+      "message": "Program mismatch",
+      "docs": "Program id mismatch"
+    },
+    {
+      "name": "mustBeOnlyInstruction",
+      "code": 1367932929,
+      "message": "Must be only instruction",
+      "docs": "Instruction must be the only instruction"
+    },
+    {
+      "name": "invalidFleetSize",
+      "code": 1367932930,
+      "message": "Invalid fleet size",
+      "docs": "Invalid fleet size"
+    },
+    {
+      "name": "notFound",
+      "code": 1367932931,
+      "message": "Not found",
+      "docs": "A referenced item was not found"
+    },
+    {
+      "name": "invalidInput",
+      "code": 1367932932,
+      "message": "Invalid input",
+      "docs": "Invalid user input"
+    },
+    {
+      "name": "typeMismatch",
+      "code": 1367932933,
+      "message": "Type mismatch",
+      "docs": "Types or variants did not match as expected"
+    },
+    {
+      "name": "celestialBodyTypeMismatch",
+      "code": 1367932934,
+      "message": "Celestial body type mismatch",
+      "docs": "Celestial body type did not match expectations"
+    },
+    {
+      "name": "statusMismatch",
+      "code": 1367932935,
+      "message": "Status mismatch",
+      "docs": "Status or enum mismatch"
+    },
+    {
+      "name": "inactiveClaimStake",
+      "code": 1367932936,
+      "message": "Claim stake status mismatch",
+      "docs": "Claim stake is not in the expected active/evicted state"
+    },
+    {
+      "name": "craftingHabNotEvicted",
+      "code": 1367932937,
+      "message": "Crafting hab not evicted",
+      "docs": "Crafting hab is not evicted when required"
+    },
+    {
+      "name": "evictionNotDelinquent",
+      "code": 1367932938,
+      "message": "Eviction not delinquent",
+      "docs": "Eviction requires rent delinquency; current state is not delinquent."
+    },
+    {
+      "name": "stateMismatch",
+      "code": 1367932939,
+      "message": "State mismatch",
+      "docs": "State discrepancy"
+    },
+    {
+      "name": "idMismatch",
+      "code": 1367932940,
+      "message": "Id mismatch",
+      "docs": "Identifier/key mismatch"
+    },
+    {
+      "name": "gameMismatch",
+      "code": 1367932941,
+      "message": "Game mismatch",
+      "docs": "Game id mismatch"
+    },
+    {
+      "name": "profileMismatch",
+      "code": 1367932942,
+      "message": "Profile mismatch",
+      "docs": "Profile mismatch"
+    },
+    {
+      "name": "factionMismatch",
+      "code": 1367932943,
+      "message": "Faction mismatch",
+      "docs": "Faction mismatch"
+    },
+    {
+      "name": "systemMismatch",
+      "code": 1367932944,
+      "message": "System mismatch",
+      "docs": "System mismatch"
+    },
+    {
+      "name": "starbaseDestroyed",
+      "code": 1367932945,
+      "message": "Starbase destroyed",
+      "docs": "Starbase is destroyed"
+    },
+    {
+      "name": "starbaseNotDestroyed",
+      "code": 1367932946,
+      "message": "Starbase not destroyed",
+      "docs": "Starbase is not destroyed"
+    },
+    {
+      "name": "capacityExceeded",
+      "code": 1367932947,
+      "message": "Capacity exceeded",
+      "docs": "Resource or slot capacity exceeded"
+    },
+    {
+      "name": "requirementsNotMet",
+      "code": 1367932948,
+      "message": "Requirements not met",
+      "docs": "Prerequisites or requirements were not met"
+    },
+    {
+      "name": "cooldownActive",
+      "code": 1367932949,
+      "message": "Cooldown active",
+      "docs": "Operation blocked due to an active cooldown"
+    },
+    {
+      "name": "usageLimitExceeded",
+      "code": 1367932950,
+      "message": "Usage limit exceeded",
+      "docs": "Usage limit exceeded"
+    },
+    {
+      "name": "craftingJobLimitReached",
+      "code": 1367932951,
+      "message": "Crafting job limit reached",
+      "docs": "Maximum number of crafting hab jobs reached"
+    },
+    {
+      "name": "hubAlreadyPlaced",
+      "code": 1367932952,
+      "message": "Multiple hubs placed",
+      "docs": "Attempted to place more than one hub building"
+    },
+    {
+      "name": "alreadyExists",
+      "code": 1367932953,
+      "message": "Already exists",
+      "docs": "Duplicate/Already exists"
+    },
+    {
+      "name": "duplicateResource",
+      "code": 1367932954,
+      "message": "Duplicate resource",
+      "docs": "Duplicate entry for a resource-like item"
+    },
+    {
+      "name": "notAtCentralSpaceStation",
+      "code": 1367932955,
+      "message": "Not At Central Space Station",
+      "docs": "Not At Central Space Station"
+    },
+    {
+      "name": "notWithinRange",
+      "code": 1367932956,
+      "message": "Not within range",
+      "docs": "Not within allowed range"
+    },
+    {
+      "name": "globalCeasefireActive",
+      "code": 1367932957,
+      "message": "Global ceasefire active",
+      "docs": "Combat actions are blocked by a global ceasefire"
+    },
+    {
+      "name": "unauthorized",
+      "code": 1367932958,
+      "message": "Unauthorized",
+      "docs": "Unauthorized or access denied"
+    },
+    {
+      "name": "underConstruction",
+      "code": 1367932959,
+      "message": "Under construction",
+      "docs": "Operation blocked while structure is under construction"
+    },
+    {
+      "name": "instanceDeactivated",
+      "code": 1367932960,
+      "message": "Instance deactivated",
+      "docs": "Structure instance is deactivated"
+    },
+    {
+      "name": "numericOverflow",
+      "code": 1367932961,
+      "message": "Numeric overflow",
+      "docs": "Numeric overflow occurred"
+    },
+    {
+      "name": "escrowUnderflow",
+      "code": 1367932962,
+      "message": "Escrow underflow",
+      "docs": "Escrow underflow"
+    },
+    {
+      "name": "insufficientAmount",
+      "code": 1367932963,
+      "message": "Insufficient amount",
+      "docs": "Insufficient amount provided or available"
+    },
+    {
+      "name": "withdrawalLimitExceeded",
+      "code": 1367932964,
+      "message": "Withdrawal limit exceeded",
+      "docs": "Withdrawal amount exceeds configured limit"
+    },
+    {
+      "name": "withdrawDisabled",
+      "code": 1367932965,
+      "message": "Withdraw disabled",
+      "docs": "Withdrawals are disabled for this cargo type"
+    },
+    {
+      "name": "epochDivisionError",
+      "code": 1367932966,
+      "message": "Epoch division error",
+      "docs": "Epoch calculation/division error"
+    },
+    {
+      "name": "invalidTimestamp",
+      "code": 1367932967,
+      "message": "Invalid timestamp",
+      "docs": "Invalid timestamp/clock value"
+    },
+    {
+      "name": "regionNotFound",
+      "code": 1367932968,
+      "message": "Region not found",
+      "docs": "Region not found"
+    },
+    {
+      "name": "regionInvalid",
+      "code": 1367932969,
+      "message": "Region invalid",
+      "docs": "Region is invalid"
+    },
+    {
+      "name": "invalidPath",
+      "code": 1367932970,
+      "message": "Invalid path",
+      "docs": "Invalid path"
+    },
+    {
+      "name": "boundingBoxFailed",
+      "code": 1367932971,
+      "message": "Bounding box failed",
+      "docs": "Bounding box creation failed"
+    },
+    {
+      "name": "invariantViolation",
+      "code": 1367932972,
+      "message": "Invariant violation",
+      "docs": "Invariant violation (internal error)"
+    },
+    {
+      "name": "sequenceIdMismatch",
+      "code": 1367932973,
+      "message": "Sequence ids do not match",
+      "docs": "Sequence ids do not match"
+    },
+    {
+      "name": "rentedFleet",
+      "code": 1367932974,
+      "message": "Fleet is rented",
+      "docs": "Fleet is rented"
+    },
+    {
+      "name": "rosterPageMismatch",
+      "code": 1367932975,
+      "message": "Crew roster page mismatch",
+      "docs": "Crew roster page index does not match the instruction's page_index"
+    },
+    {
+      "name": "crewAssetMismatch",
+      "code": 1367932976,
+      "message": "Crew asset mismatch",
+      "docs": "A supplied crew asset id was not found on the roster page"
+    },
+    {
+      "name": "crewFeatureDisabled",
+      "code": 1367932977,
+      "message": "Crew feature disabled",
+      "docs": "Crew feature is disabled (Game.crew_config is None)"
+    },
+    {
+      "name": "crewRecordNotFound",
+      "code": 1367932978,
+      "message": "Crew record not found",
+      "docs": "Crew record not found on the roster page"
+    },
+    {
+      "name": "crewBadStatus",
+      "code": 1367932979,
+      "message": "Crew bad status",
+      "docs": "Crew is in the wrong status for this action"
+    },
+    {
+      "name": "crewBusy",
+      "code": 1367932980,
+      "message": "Crew busy",
+      "docs": "Crew is busy (reserved by a quest / garrison)"
+    },
+    {
+      "name": "perkOfferGate",
+      "code": 1367932981,
+      "message": "Perk offer gate",
+      "docs": "Perk offer-gate not satisfied (rarity/aptitude/personality)"
+    },
+    {
+      "name": "gearSlotOccupied",
+      "code": 1367932982,
+      "message": "Gear slot occupied",
+      "docs": "Target gear slot is already occupied"
+    },
+    {
+      "name": "crewAlreadyBound",
+      "code": 1367932983,
+      "message": "Crew already bound",
+      "docs": "Crew asset id already has a record on this roster page (duplicate bind/migrate rejected; PR #732 review \u2014 the double-bind guard)"
+    },
+    {
+      "name": "crewXpAwardTooLarge",
+      "code": 1367932984,
+      "message": "Crew XP award too large",
+      "docs": "AwardCrewActivityXp per-category award exceeds the per-call cap (PR #732 review)"
+    },
+    {
+      "name": "setPerkDefinitionsUnsupported",
+      "code": 1367932985,
+      "message": "Set perk definitions unsupported",
+      "docs": "SetPerkDefinitions was called but the runtime perk-definition map is not yet wired (the folds read the static catalogue). Explicit failure beats silently accepting and discarding the supplied definitions (PR #732 second review)."
+    },
+    {
+      "name": "crewRosterOwnerMismatch",
+      "code": 1367932986,
+      "message": "Crew roster owner mismatch",
+      "docs": "The supplied CrewRoster is not the expected (character, page_index) PDA \u2014 a caller tried to operate on a roster page that does not belong to the validated character (PR #732 second review \u2014 the roster owner binding)"
+    },
+    {
+      "name": "crewAuthorityMismatch",
+      "code": 1367932987,
+      "message": "Crew authority mismatch",
+      "docs": "The crew attestation authority did not sign / does not match `Game.crew_config` (PR #732 second review \u2014 Bind/Migrate are authority-gated until Phase-2 attestation)"
+    },
+    {
+      "name": "fleetCrewPageConflict",
+      "code": 1367932988,
+      "message": "Fleet crew page conflict",
+      "docs": "The FleetCrewBinding is pinned to a different roster page (one-page-per-fleet invariant \u2014 PR #732 second review)"
+    },
+    {
+      "name": "factionDrainBlocked",
+      "code": 1367932989,
+      "message": "Faction drain blocked: own-faction opposition requires an outlaw declaration",
+      "docs": "A mission's settled action would DRAIN the rightful incumbent of a sector the actor's OWN faction holds, and the actor is not a declared outlaw \u2014 the own-faction anti-grief gate (doc 180 \u00a73 Phase-2 faction-stance). Declare outlaw to act against your own faction."
+    },
+    {
+      "name": "commitmentWindowActive",
+      "code": 1367932990,
+      "message": "Outlaw commitment window still active",
+      "docs": "ClearOutlaw was attempted while the 2-epoch commitment window is still active \u2014 the outlaw flag is locked until `now >= pvp_until` (doc 180 \u00a73d, the PvP-flag commitment)."
+    },
+    {
+      "name": "reservedFactionId",
+      "code": 1367932991,
+      "message": "Reserved faction id",
+      "docs": "Reserved faction id (0 = null; 1/2/3 = majors, seed-only)"
+    },
+    {
+      "name": "invalidFactionFlags",
+      "code": 1367932992,
+      "message": "Invalid faction flags",
+      "docs": "Capability flags contain unknown bits"
+    },
+    {
+      "name": "factionFlagNotPermitted",
+      "code": 1367932993,
+      "message": "Faction flag not permitted",
+      "docs": "Caller may not grant the requested high-trust flags"
+    },
+    {
+      "name": "invalidFactionStatusTransition",
+      "code": 1367932994,
+      "message": "Invalid faction status transition",
+      "docs": "Illegal faction status transition"
+    },
+    {
+      "name": "factionBridgeInconsistent",
+      "code": 1367932995,
+      "message": "Faction bridge inconsistent",
+      "docs": "alignment<->faction_id bridge inconsistent at seed"
+    },
+    {
+      "name": "standingProfileMismatch",
+      "code": 1367932996,
+      "message": "Standing profile mismatch",
+      "docs": "Standing account's profile doesn't match the settling profile"
+    },
+    {
+      "name": "standingFactionMismatch",
+      "code": 1367932997,
+      "message": "Standing faction mismatch",
+      "docs": "Standing account's faction_id doesn't match the credited faction"
+    },
+    {
+      "name": "standingPdaMismatch",
+      "code": 1367932998,
+      "message": "Standing PDA mismatch",
+      "docs": "Standing account PDA doesn't match its derived address"
+    },
+    {
+      "name": "standingEpochCapExceeded",
+      "code": 1367932999,
+      "message": "Standing epoch cap exceeded",
+      "docs": "Per-faction per-epoch standing-emission cap exceeded"
+    },
+    {
+      "name": "standingTooLow",
+      "code": 1367933000,
+      "message": "Standing too low",
+      "docs": "Standing too low for this action"
+    },
+    {
+      "name": "standingAccountRequired",
+      "code": 1367933001,
+      "message": "Standing account required",
+      "docs": "A standing/config/meter account is required for accrual but was not supplied (partial set)"
+    },
+    {
+      "name": "factionMarketPdaMismatch",
+      "code": 1367933002,
+      "message": "Faction market PDA mismatch",
+      "docs": "Faction market PDA doesn't match its derived address"
+    },
+    {
+      "name": "factionMarketTreasuryMismatch",
+      "code": 1367933003,
+      "message": "Faction market treasury mismatch",
+      "docs": "Faction market's bound treasury doesn't match the supplied treasury"
+    },
+    {
+      "name": "factionReserveFloor",
+      "code": 1367933004,
+      "message": "Faction reserve floor",
+      "docs": "An Ask would draw a faction treasury reserve below its strategic floor"
+    },
+    {
+      "name": "factionNotActive",
+      "code": 1367933005,
+      "message": "Faction market not active",
+      "docs": "Faction market is not Active"
+    },
+    {
+      "name": "factionAllied",
+      "code": 1367933006,
+      "message": "Faction is allied",
+      "docs": "Cannot attack an allied faction (in its homeland)"
+    },
+    {
+      "name": "factionCeasefire",
+      "code": 1367933007,
+      "message": "Faction ceasefire active",
+      "docs": "Cannot attack during an active ceasefire"
+    },
+    {
+      "name": "factionNotCombatant",
+      "code": 1367933008,
+      "message": "Faction is not a combatant",
+      "docs": "Faction lacks the COMBATANT capability (declared in P3, thrown in P4)"
+    },
+    {
+      "name": "selfRelation",
+      "code": 1367933009,
+      "message": "Self relation",
+      "docs": "A faction cannot have a relation with itself"
+    },
+    {
+      "name": "invalidFaction",
+      "code": 1367933010,
+      "message": "Invalid faction",
+      "docs": "Faction account/id is invalid or not Active"
+    },
+    {
+      "name": "maxAlliesExceeded",
+      "code": 1367933011,
+      "message": "Max allies exceeded",
+      "docs": "A faction has reached its maximum simultaneous allies"
+    },
+    {
+      "name": "invalidRelationArg",
+      "code": 1367933012,
+      "message": "Invalid relation argument",
+      "docs": "Invalid relation argument (e.g. ceasefire timestamp in the past)"
+    },
+    {
+      "name": "ceasefireTooShort",
+      "code": 1367933013,
+      "message": "Ceasefire too short",
+      "docs": "Requested ceasefire is shorter than the configured minimum"
+    },
+    {
+      "name": "ceasefireCooldown",
+      "code": 1367933014,
+      "message": "Ceasefire cooldown active",
+      "docs": "Re-entering a ceasefire on this pair is still on cooldown"
+    },
+    {
+      "name": "factionOwnershipMismatch",
+      "code": 1367933015,
+      "message": "Faction ownership mismatch",
+      "docs": "P4: the dynamic-ownership sidecar is required-but-absent, stale (wrong generation), or carries an unknown asset_kind."
+    },
+    {
+      "name": "starbaseContested",
+      "code": 1367933016,
+      "message": "Starbase contested",
+      "docs": "P4: the starbase is in its post-capture contested window (`now < contested_until`) and cannot be re-flipped yet (anti capture-and-camp); also a too-far-future/over-cap pre-seeded window."
+    },
+    {
+      "name": "invalidFleetDirective",
+      "code": 1367933017,
+      "message": "Invalid fleet directive",
+      "docs": "P5b: a directive payload is malformed \u2014 unknown `FleetDirectiveKind`, or a timestamp that does not fit the i32 epoch-relative encoding (`directive_ts_out_of_range`)."
+    },
+    {
+      "name": "factionDirectiveRateLimited",
+      "code": 1367933018,
+      "message": "Faction directive rate limited",
+      "docs": "P5b: `SetFleetDirective` was called again before `last_update + DIRECTIVE_COOLDOWN_SECS` elapsed."
+    },
+    {
+      "name": "fleetNotOwnedByFaction",
+      "code": 1367933019,
+      "message": "Fleet not owned by faction",
+      "docs": "P5b: the supplied fleet's `FactionOwnership(FLEET)` sidecar does not name this faction as controller, or the operator profile does not match `FactionAccount.operator_profile`."
+    },
+    {
+      "name": "factionFleetCapExceeded",
+      "code": 1367933020,
+      "message": "Faction fleet cap exceeded",
+      "docs": "P5b: `MintNpcFleet` would exceed `FactionAccount.max_npc_fleets` (the primary anti-flood headcount cap)."
+    },
+    {
+      "name": "factionCaptureRateLimited",
+      "code": 1367933021,
+      "message": "Faction capture rate limited",
+      "docs": "P5b: an NPC faction tried to capture again before its per-faction `last_capture_at + faction_capture_cooldown_secs` elapsed (the on-chain anti-blitz brake)."
+    }
+  ]
+}

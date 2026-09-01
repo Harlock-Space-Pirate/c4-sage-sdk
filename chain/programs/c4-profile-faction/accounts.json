@@ -1,0 +1,59 @@
+{
+  "programId": "C4FACQA1PpNRKrjQ2862ABNR42DTz7EzGj1uhTNFASwP",
+  "name": "c4-profile-faction",
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-25T15:13:29Z",
+  "discriminatorScheme": "sha256('account:'+TypeName)[:8]",
+  "framework": "star-frame",
+  "accountTypes": [
+    {
+      "name": "ProfileFactionAccount",
+      "discriminator": "0e9577f391f04fe3",
+      "size": {
+        "kind": "fixed",
+        "bytes": 43,
+        "min": 43,
+        "max": 43,
+        "mode": 43,
+        "modeCount": 2233,
+        "liveCount": 2233,
+        "sizeHistogramCount": 1
+      },
+      "sample": "AJnjw59LABouWQVRsCLuMhrKpwciWQ7cR1ZwhmnqxtT4",
+      "layoutComplete": true,
+      "fields": [
+        {
+          "name": "discriminator",
+          "type": "[u8;8]",
+          "offset": 0
+        },
+        {
+          "name": "version",
+          "type": "u8",
+          "offset": 8
+        },
+        {
+          "name": "profile",
+          "type": "Pubkey",
+          "offset": 9
+        },
+        {
+          "name": "faction",
+          "type": "u8",
+          "offset": 41,
+          "note": "0 unaligned-class, 1 MUD, 2 ONI, 3 Ustur. Tag >= 4 rejects."
+        },
+        {
+          "name": "bump",
+          "type": "u8",
+          "offset": 42,
+          "note": "Stored bump. Live sample this session = 253, so it is not universally 255."
+        }
+      ],
+      "createdBy": [
+        "choose_faction"
+      ]
+    }
+  ]
+}

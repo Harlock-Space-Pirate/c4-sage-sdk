@@ -1,0 +1,40 @@
+{
+  "programId": "PSubAEkp16MhpP7AfB5kBbpWQ4cppUj9nxS5vUkHT13",
+  "name": "zink-subscription",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "deploySlot": 8299741,
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]",
+  "instructions": [
+    {
+      "discriminator": "21d6a987237f4e07",
+      "name": "close_subscription",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for close subscription."
+    },
+    {
+      "discriminator": "3c8bbdf2bfd08f12",
+      "name": "cancel_subscription",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for cancel subscription."
+    },
+    {
+      "discriminator": "678b8829b560eaa8",
+      "name": "update_payout_key",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for update payout key."
+    },
+    {
+      "discriminator": "af2ab957908366d4",
+      "name": "settle",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for settle."
+    },
+    {
+      "discriminator": "d09c902638419812",
+      "name": "initialize_subscription",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for initialize subscription."
+    }
+  ]
+}

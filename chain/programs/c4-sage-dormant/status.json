@@ -1,0 +1,19 @@
+{
+  "name": "c4-sage-dormant",
+  "programId": "AAzpHLgN3L9MTThzjoM6QCLBBuHALnHwq9G1N84QTvxM",
+  "role": "sage-game",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "programData": "8jfQ3CFb6Mp1v6mUpHX3BXfvRBF2yRAGgbAn2cxG1bFz",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 38889084,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 266,
+    "player": 220,
+    "admin": 19,
+    "unknown": 27
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "programId": "C4PRoFNroxxzdgeCoM31LJjYRg7kT6ymogSTAT99iD1u",
+  "name": "c4-profile",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "deploySlot": 27180239,
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]",
+  "instructions": [
+    {
+      "discriminator": "06feb1576f480cd3",
+      "name": "adjust_auth",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for adjust auth."
+    },
+    {
+      "discriminator": "0961b0241c13295d",
+      "name": "set_role_name",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for set role name."
+    },
+    {
+      "discriminator": "1e6bc55f4f99c220",
+      "name": "drain_sol_vault",
+      "track": "admin",
+      "mutates": "Admin/operator surface. Account map omitted from the product catalog."
+    },
+    {
+      "discriminator": "43e36e03d70229cb",
+      "name": "invite_member",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for invite member."
+    },
+    {
+      "discriminator": "4915ba5dd71b576c",
+      "name": "remove_existing_member_from_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for remove existing member from role."
+    },
+    {
+      "discriminator": "4a45a8a3f8038200",
+      "name": "remove_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for remove role."
+    },
+    {
+      "discriminator": "4adbd0f8ed99bce5",
+      "name": "set_role_authorizer",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for set role authorizer."
+    },
+    {
+      "discriminator": "4ec26fe5c6a9a26a",
+      "name": "set_name",
+      "track": "player",
+      "mutates": "Allocates the PlayerName PDA. No rename path."
+    },
+    {
+      "discriminator": "55339e2990076757",
+      "name": "add_existing_member_to_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for add existing member to role."
+    },
+    {
+      "discriminator": "78c6676b0ec1664f",
+      "name": "leave_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for leave role."
+    },
+    {
+      "discriminator": "7d4e4dd0cf7ff60e",
+      "name": "unknown_7d4e4dd0",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "86b9dbb6db7e189d",
+      "name": "join_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for join role."
+    },
+    {
+      "discriminator": "9ae110b0924c4e69",
+      "name": "add_keys",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for add keys."
+    },
+    {
+      "discriminator": "aa937fdfde70cda3",
+      "name": "create_role",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for create role."
+    },
+    {
+      "discriminator": "ac0cbdea1bce00f1",
+      "name": "player_name",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for player name."
+    },
+    {
+      "discriminator": "ac41643f1fd03947",
+      "name": "remove_keys",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for remove keys."
+    },
+    {
+      "discriminator": "ad0be1b451595d8a",
+      "name": "accept_invite",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for accept invite."
+    },
+    {
+      "discriminator": "e1cdea8f11ba32dc",
+      "name": "create_profile",
+      "track": "player",
+      "mutates": "Creates a player Profile account and initial auth keys."
+    },
+    {
+      "discriminator": "e6979804ee0b640f",
+      "name": "unknown_e6979804",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "fb13b76da8b312c3",
+      "name": "add_key",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for add key."
+    },
+    {
+      "discriminator": "fd86f832580b8d90",
+      "name": "unknown_fd86f832",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "fefc992c29e8386b",
+      "name": "unknown_fefc992c",
+      "track": "unknown",
+      "mutates": "Externally dispatched; name and account map not proven."
+    },
+    {
+      "discriminator": "ff844cab91d57fd6",
+      "name": "set_role_accepting_members",
+      "track": "player",
+      "mutates": "Reads and/or mutates state for set role accepting members."
+    }
+  ]
+}

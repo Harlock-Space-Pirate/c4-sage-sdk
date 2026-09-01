@@ -1,0 +1,19 @@
+{
+  "name": "zink-subscription",
+  "programId": "PSubAEkp16MhpP7AfB5kBbpWQ4cppUj9nxS5vUkHT13",
+  "role": "payments",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "programData": "3ksXD7V1E4rrFp3KfjXozYTgXiyShykVvmFYQvHGNp5Z",
+  "upgradeAuthority": "CFB1dxBvtRhQHLemJjgoJe5Yc7h4wtaJsndAdtKyUkdC",
+  "deploySlot": 8299741,
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 5,
+    "player": 5,
+    "admin": 0,
+    "unknown": 0
+  }
+}

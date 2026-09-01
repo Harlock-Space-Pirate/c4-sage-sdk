@@ -1,0 +1,20 @@
+[package]
+name = "c4-sage-sdk"
+version = "0.1.0"
+edition = "2021"
+description = "C4 SAGE (Zink) client from chain/ catalogs. Not an Anchor IDL."
+license = "Apache-2.0"
+publish = false
+
+[dependencies]
+bs58 = "0.5"
+sha2 = "0.10"
+curve25519-dalek = "=3.2.1"
+ed25519-dalek = "1.0.1"
+ureq = { version = "2.9", default-features = false, features = ["json", "tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[[test]]
+name = "smoke"
+path = "tests/smoke.rs"

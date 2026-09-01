@@ -1,0 +1,78 @@
+{
+  "programId": "C4FACQA1PpNRKrjQ2862ABNR42DTz7EzGj1uhTNFASwP",
+  "name": "c4-profile-faction",
+  "cluster": "zink-mainnet",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "deploySlot": 27180207,
+  "discriminatorScheme": "sha256('global:'+snake_name)[:8]",
+  "instructions": [
+    {
+      "discriminator": "b2e844d95970caaf",
+      "name": "choose_faction",
+      "track": "player",
+      "accounts": [
+        {
+          "name": "funder",
+          "signer": true,
+          "writable": true,
+          "program": false,
+          "pda_suspected": false
+        },
+        {
+          "name": "profile",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "c4_profile_faction_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        },
+        {
+          "name": "c4_profile_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        },
+        {
+          "name": "profile_faction",
+          "signer": false,
+          "writable": true,
+          "program": false,
+          "pda_suspected": true
+        },
+        {
+          "name": "system_program",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        },
+        {
+          "name": "c4_profile_program_echo",
+          "signer": false,
+          "writable": false,
+          "program": true,
+          "pda_suspected": false
+        }
+      ],
+      "mutates": "Creates the ProfileFaction PDA (one-shot enlistment; no faction switch).",
+      "args": [
+        {
+          "name": "keyIndex",
+          "type": "u16"
+        },
+        {
+          "name": "faction",
+          "type": "u8"
+        }
+      ],
+      "note": "Entrypoint has no 8-byte disc constants (runtime sha256). Re-enlist is not an instruction."
+    }
+  ]
+}

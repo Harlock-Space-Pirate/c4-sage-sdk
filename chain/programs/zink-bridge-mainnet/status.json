@@ -1,0 +1,17 @@
+{
+  "name": "zink-bridge-mainnet",
+  "programId": "BR1DGEaF3Z3ZN9UouYiRLKbK2WWgFmHwUwcZKJfmJSSP",
+  "role": "bridge",
+  "uiWorld": false,
+  "cluster": "zink-mainnet",
+  "rpc": "https://rpc1.z.ink",
+  "verifiedAt": "2026-08-25T14:58:11Z",
+  "status": "AccountNotFound on rpc1.z.ink",
+  "framework": "star-frame",
+  "instructionCounts": {
+    "total": 0,
+    "player": 0,
+    "admin": 0,
+    "unknown": 0
+  }
+}
