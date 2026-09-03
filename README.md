@@ -18,6 +18,8 @@ cd sdk && npm install && npm test
 cd sdk-rs && cargo test
 ```
 
+as featured at vault.leeks.ink, console.leeks.ink, chat.leeks.ink ♾️
+
 ---
 
 We use AI 1000× more than your 1000×. The unit on our side is still *being
